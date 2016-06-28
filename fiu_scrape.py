@@ -5,9 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from pprint import pprint
 import json
-
-
-
+import time
 
 
 
@@ -39,26 +37,33 @@ def get_family_list(soup, id):
 def get_editable_list(soup,items):
 	selector = '.link-list.editable-list.'+items+' > li > a > span:nth-of-type(1)'
 	use_items = soup.select(selector) # needs 'selector' ??
+	return [item.text for item in use_items]
 
-def parse_use_page(html_str,dict):
+def parse_use_page(html_str,fonts_dict):
 	use_dict = {}
-	typefaces = [] #(to scrape)
+	soup = BeautifulSoup(html_str, 'lxml')
+	typeface_elements = soup.select('.font-samples.families.editable-list > li > a') 
+	typefaces = []
 
-	# update fonts_dict
-	for font in typefaces:
-		fonts_dict['font'] = {}
-		fonts_dict['font']['url'] = #to parse
+	# update fonts_dict and typefaces 
+	for element in typeface_elements:
+		font = element.select('img')[0].attrs['title']
+		typefaces.append(font)
+		fonts_dict[font] = {}
+		fonts_dict[font]['url'] = element.attrs['href']
 
-	# soup = ??
 	# return one use_dict to append
 	use_dict['typefaces'] = typefaces
-
-	font-samples.families.editable-list
-
 	use_dict['formats'] = get_editable_list(soup,'formats')
 	use_dict['industries'] = get_editable_list(soup,'industries')
 	use_dict['tags'] = get_editable_list(soup,'tags')
 	use_dict['location'] = get_editable_list(soup,'location')
+
+	# pprint(use_dict)
+	# print '\n'
+	# pprint(fonts_dict)
+
+	return use_dict
 
 
 # def get_font_page(id):
@@ -68,8 +73,32 @@ def parse_use_page(html_str,dict):
 # 	return request.text
 
 
+def scrape_font_data():
+	
+	with open('uses_urls.json') as json_file:
+		uses_urls = json.load(json_file)
 
-def scrape():
+	print len(uses_urls)
+	
+	fonts_dict = {}
+	use_list = []
+
+	for use_url in uses_urls:
+		print "fetching url "+str(use_url) + "\n"
+		html_str = requests.get('http://'+use_url).text # careful
+		use_list.append(parse_use_page(html_str,fonts_dict))
+
+	with open('fiu_fonts_dict.json', 'w') as outfile:
+		json.dump(fonts_dict, outfile)
+
+	with open('fiu_use_list.json', 'w') as outfile:
+		json.dump(font_use_list, outfile)
+
+# TO DO NEXT 
+# - enable file to be written / modified several times
+# - combine this with a feature to crawl urls and save position in list / restart later
+
+# replace while True with a for loop in fonts_dict.keys (list!)
 	# font_data_list = []
 	# id = 1
 	# while True:
@@ -84,23 +113,5 @@ def scrape():
 	# 	json.dump(font_data_list, outfile)
 
 
-	uses_urls = []
-	start_url_list = ['http://fontsinuse.com/collection/'+str(i) for i in range(1,115)]
-	for url in start_url_list:
-    	webpage = requests.get(url).text
-    	soup = BeautifulSoup(webpage, 'lxml')
-		for link in soup.findAll("a","gallery-thumb-link"):
-        	uses_urls += ['fontsinuse.com'+(link.get('href'))]
-
-
-    fonts_dict = {}
-    use_list = []
-    for use_url in uses_urls:
-    	html_str = requests.get(use_url).text
-    	use_list.append(parse_use_page(html_str,fonts_dict))
-
-
-
-
 if __name__ == '__main__':
-	scrape()
+	scrape_font_data()

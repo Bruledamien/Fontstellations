@@ -1,0 +1,41 @@
+1) Collect Fontsinuse.com ("fiu") urls for each use (cf. collect_use_urls)
+We browse all pages of types ['http://fontsinuse.com/collection/'+str(i) for i in range(1,115)] - 115 being last page as of May 2016,
+and save urls of uses.
+
+Output : uses_urls.json
+
+2) Scrape use pages, with two different outputs (cf. fiu_scrape_uses.py)
+    - a dict of fonts, where keys are font names avec values another dict (for the moment of type {"url_id":012345})
+
+  Beginning of the dict :  {"Deauville": {"url_id": 42297}, "Greta Text": {"url_id": 7485},"Chwast Art Tone Boot Black": {"url_id": 32765}, ... }
+
+    - a list of uses, each use being a dict of type
+
+    {"industries": ["Fashion/Apparel", "Retail/Shopping"], "tags": ["shoes", "logo"], "fiu_id": 13707, "typefaces": ["Triplex Italic", "Source Sans"], "location": [], "formats": ["Signs", "Branding/Identity"]}
+
+ 3) Populate the dict of fonts (and their own dict) with more info by fetching the font page on fiu (using id already in individual font dict). 
+
+—
+test showing png at this step ? implies converting and seeing how long it takes
+—
+
+Eventually update nodes once again to include the 2nd-level properties (i.e. those related to their use like ‘Industry’, not intrinsic like ‘designer’ or ‘creation date’)* so the algorithm can filter by those criteria.
+
+NOT : must filter nodes AND links ?? (ask mollie : maybe way to not make link if node filtered out)
+/!\ must be done while fonts are in dict (browse list of uses, access font by key/name…)
+
+The fonts_dict will be converted into the format of d3’s node json by putting each key into the corresponding value (which is a dict), with it’s own key set to “id”.
+
+{key : value={“designer”:”name”, …}} —> {“id” : key, “designer”: “name”, …}
+
+
+
+4) Create the nodes json for d3 based on the analysis of the use_dict.json. 
+
+
+* keep tags for links only ?
+
+
+
+WHAT HAPPENS to NODE with NO LINKS ??
+

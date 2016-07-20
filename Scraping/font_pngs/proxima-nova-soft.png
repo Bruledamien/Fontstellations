@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="A searchable archive of typographic design, indexed by typeface, format, and industry."/>
+
+<meta name="google-site-verification" content="m2fNjYWTnvK8-qRWVDXCBic69GD42fxlLqjDJGG9HDs" />
+<meta property="og:site_name" content="Fonts in Use"/>
+<meta property="og:url" content="http://fontsinuse.com/renders/35/26259/800/1/56f05105/proxima-nova-soft.png" />
+
+<link rel="alternate" type="application/rss+xml" title="All FontsInUse contributions" href="http://feeds.feedburner.com/FontsInUseAll" />
+<link rel="alternate" type="application/rss+xml" title="All FontsInUse comments" href="http://feeds.feedburner.com/FontsInUseComments" />
+<link rel="alternate" type="application/rss+xml" title="FontsInUse Blog Posts" href="http://feeds.feedburner.com/FontsInUse" />
+<link rel="alternate" type="application/rss+xml" title="FontsInUse Blog RSS" href="http://feeds.feedburner.com/FontsInUse-Comments" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://fontsinuse.com/xmlrpc.php" />
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>Fonts In Use – Type at work in the real world.</title>
+
+<link href="http://assets.fontsinuse.com/css/fiu/sitewide.css?v=33207ccfe32dbcdf6f781982ca24b2de" type="text/css" rel="stylesheet"/>
+<link href="//cloud.webtype.com/css/1b576e6d-c98c-4e27-a415-628fdf552cd5.css" rel="stylesheet" media="screen" />
+<link href="//cloud.webtype.com/css/705f80e4-c23d-425d-9bcc-dffa243d31da.css" rel="stylesheet" media="screen" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" media="screen" />
+
+
+
+<script type="text/javascript" src="http://assets.fontsinuse.com/js/fiu/sitewide_head.js?v=86620d6c8b735c0ec01c1dd44bc0386a"></script>
+<script type="text/javascript">
+	 var app = {
+			 'environment': 'prod'
+	 };
+	 	 var cdn = {
+		 active: true,
+		 domain: 'assets.fontsinuse.com',
+		 folder: ''
+	 };
+	 var CKEDITOR_BASEPATH = '/js/ckeditor/';
+
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-19004704-1', 'auto');
+     ga('send', 'pageview');
+
+</script>
+</head>
+<body class="responsive">
+<div id="site-container">
+<div id="header">
+<div id="branding">
+	<div id="site-title">
+	<a href="/" title="Fonts in Use" rel="home">
+    <img src="http://assets.fontsinuse.com/images/nameplate.svg?47" alt="Fonts in Use" width="140" height="118" onerror="this.removeAttribute('onerror'); this.src='http://assets.fontsinuse.com/images/nameplate.png?47'" />
+     </a>
+	</div>
+</div><div id="top-right">
+<div id="text-sponsor">
+	<div id="sponsor-wrapper">
+	<div class="sponsor-title">An independent archive of typography.</div>
+	<a class="sponsor-link" href="" target="_blank"></a>
+	</div>
+	&nbsp;
+</div><div id="hey-user"><a id="login-prompt" href="/user/login?_target_path=%2Frenders%2F35%2F26259%2F800%2F1%2F56f05105%2Fproxima-nova-soft.png">Sign in</a> to participate.
+</div><br class="clear"/>
+<div id="top-right-lower">
+        <ul id="main-menu">
+            
+                <li class="first">        <a href="/">Collection</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/blog">Blog</a>        
+    </li>
+
+
+    </ul>
+
+<form id="search" method="GET" action="/search">
+<input class="search-entry" type="text" name="terms" placeholder="Enter a word, typeface, tag …"/>
+<span class="advsrch-launcher">or combine terms with <a href="/search/advanced">Advanced Search</a></span>
+</form>
+</div>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div><!-- #header -->
+<br class="clear"/>
+<div id="use-navigation">
+
+<table id="category-lists">
+<tr>
+<td class="category-list">
+<h4><a href="#">Industries<span>▼</span></a></h4>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Activism" href="/in/1/industries/41/activism">
+    <span>Activism</span>&nbsp;<span title="144 Uses" class="use-count">(144)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Architecture" href="/in/1/industries/37/architecture">
+    <span>Architecture</span>&nbsp;<span title="251 Uses" class="use-count">(251)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Art" href="/in/1/industries/50/art">
+    <span>Art</span>&nbsp;<span title="743 Uses" class="use-count">(743)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Automotive" href="/in/1/industries/36/automotive">
+    <span>Automotive</span>&nbsp;<span title="88 Uses" class="use-count">(88)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Business/Finance" href="/in/1/industries/53/business-and-finance">
+    <span>Business/Finance</span>&nbsp;<span title="135 Uses" class="use-count">(135)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Education
+" href="/in/1/industries/40/education">
+    <span>Education
+</span>&nbsp;<span title="403 Uses" class="use-count">(403)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Entertainment" href="/in/1/industries/21/entertainment">
+    <span>Entertainment</span>&nbsp;<span title="386 Uses" class="use-count">(386)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Event" href="/in/1/industries/23/event">
+    <span>Event</span>&nbsp;<span title="432 Uses" class="use-count">(432)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Fashion/Apparel" href="/in/1/industries/24/fashion-apparel">
+    <span>Fashion/Apparel</span>&nbsp;<span title="312 Uses" class="use-count">(312)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Film/TV" href="/in/1/industries/70/film-and-television">
+    <span>Film/TV</span>&nbsp;<span title="366 Uses" class="use-count">(366)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Food/Beverage" href="/in/1/industries/30/food-beverage">
+    <span>Food/Beverage</span>&nbsp;<span title="665 Uses" class="use-count">(665)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Governmental/Civic" href="/in/1/industries/56/governmental-civic">
+    <span>Governmental/Civic</span>&nbsp;<span title="148 Uses" class="use-count">(148)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Graphic Design" href="/in/1/industries/27/graphic-design">
+    <span>Graphic Design</span>&nbsp;<span title="842 Uses" class="use-count">(842)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Health/Fitness" href="/in/1/industries/44/health-fitness">
+    <span>Health/Fitness</span>&nbsp;<span title="156 Uses" class="use-count">(156)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Home/Interior" href="/in/1/industries/28/home-interior">
+    <span>Home/Interior</span>&nbsp;<span title="210 Uses" class="use-count">(210)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Industrial Design" href="/in/1/industries/71/industrial-design">
+    <span>Industrial Design</span>&nbsp;<span title="105 Uses" class="use-count">(105)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Institutional" href="/in/1/industries/22/institutional">
+    <span>Institutional</span>&nbsp;<span title="173 Uses" class="use-count">(173)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Kids" href="/in/1/industries/33/kids">
+    <span>Kids</span>&nbsp;<span title="165 Uses" class="use-count">(165)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Lifestyle" href="/in/1/industries/39/lifestyle">
+    <span>Lifestyle</span>&nbsp;<span title="243 Uses" class="use-count">(243)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Literature" href="/in/1/industries/31/literature">
+    <span>Literature</span>&nbsp;<span title="685 Uses" class="use-count">(685)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Local" href="/in/1/industries/55/local">
+    <span>Local</span>&nbsp;<span title="161 Uses" class="use-count">(161)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Men" href="/in/1/industries/45/men">
+    <span>Men</span>&nbsp;<span title="71 Uses" class="use-count">(71)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Music" href="/in/1/industries/43/music">
+    <span>Music</span>&nbsp;<span title="842 Uses" class="use-count">(842)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under News" href="/in/1/industries/26/news">
+    <span>News</span>&nbsp;<span title="231 Uses" class="use-count">(231)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Performing Arts" href="/in/1/industries/68/performing-arts">
+    <span>Performing Arts</span>&nbsp;<span title="146 Uses" class="use-count">(146)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Politics" href="/in/1/industries/54/politics">
+    <span>Politics</span>&nbsp;<span title="155 Uses" class="use-count">(155)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Product" href="/in/1/industries/19/product">
+    <span>Product</span>&nbsp;<span title="279 Uses" class="use-count">(279)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Religion" href="/in/1/industries/51/religion">
+    <span>Religion</span>&nbsp;<span title="68 Uses" class="use-count">(68)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Retail/Shopping" href="/in/1/industries/35/retail-shopping">
+    <span>Retail/Shopping</span>&nbsp;<span title="251 Uses" class="use-count">(251)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Science/Nature" href="/in/1/industries/34/science-nature">
+    <span>Science/Nature</span>&nbsp;<span title="159 Uses" class="use-count">(159)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Services" href="/in/1/industries/20/services">
+    <span>Services</span>&nbsp;<span title="243 Uses" class="use-count">(243)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Social Media" href="/in/1/industries/29/social-media">
+    <span>Social Media</span>&nbsp;<span title="87 Uses" class="use-count">(87)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Sports" href="/in/1/industries/42/sports">
+    <span>Sports</span>&nbsp;<span title="147 Uses" class="use-count">(147)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Technology" href="/in/1/industries/32/technology">
+    <span>Technology</span>&nbsp;<span title="335 Uses" class="use-count">(335)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Transportation" href="/in/1/industries/67/transportation">
+    <span>Transportation</span>&nbsp;<span title="85 Uses" class="use-count">(85)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Travel" href="/in/1/industries/38/travel">
+    <span>Travel</span>&nbsp;<span title="174 Uses" class="use-count">(174)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Women" href="/in/1/industries/46/women">
+    <span>Women</span>&nbsp;<span title="87 Uses" class="use-count">(87)</span></a></li>
+  
+</ul>
+
+</td>
+<td class="category-list">
+<h4><a href="#">Formats<span>▼</span></a></h4>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Advertising" href="/in/2/formats/5/advertising">
+    <span>Advertising</span>&nbsp;<span title="532 Uses" class="use-count">(532)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Album Art" href="/in/2/formats/72/album-art">
+    <span>Album Art</span>&nbsp;<span title="450 Uses" class="use-count">(450)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Art/Illustration" href="/in/2/formats/18/art-illustration">
+    <span>Art/Illustration</span>&nbsp;<span title="180 Uses" class="use-count">(180)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Booklets/Pamphlets" href="/in/2/formats/66/booklets-pamphlets">
+    <span>Booklets/Pamphlets</span>&nbsp;<span title="384 Uses" class="use-count">(384)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Books" href="/in/2/formats/6/books">
+    <span>Books</span>&nbsp;<span title="1317 Uses" class="use-count">(1317)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Branding/Identity" href="/in/2/formats/9/branding-identity">
+    <span>Branding/Identity</span>&nbsp;<span title="1425 Uses" class="use-count">(1425)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Exhibition/Installation" href="/in/2/formats/69/exhibition-installation">
+    <span>Exhibition/Installation</span>&nbsp;<span title="146 Uses" class="use-count">(146)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Film/Video" href="/in/2/formats/15/film-video">
+    <span>Film/Video</span>&nbsp;<span title="165 Uses" class="use-count">(165)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Infographics/Maps" href="/in/2/formats/49/infographics-maps">
+    <span>Infographics/Maps</span>&nbsp;<span title="145 Uses" class="use-count">(145)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Magazines" href="/in/2/formats/11/magazines">
+    <span>Magazines</span>&nbsp;<span title="570 Uses" class="use-count">(570)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Mobile" href="/in/2/formats/16/mobile">
+    <span>Mobile</span>&nbsp;<span title="89 Uses" class="use-count">(89)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Newspapers" href="/in/2/formats/10/newspapers">
+    <span>Newspapers</span>&nbsp;<span title="106 Uses" class="use-count">(106)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Object/Product" href="/in/2/formats/8/object-product">
+    <span>Object/Product</span>&nbsp;<span title="200 Uses" class="use-count">(200)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Packaging" href="/in/2/formats/4/packaging">
+    <span>Packaging</span>&nbsp;<span title="449 Uses" class="use-count">(449)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Posters/Flyers" href="/in/2/formats/12/posters-flyers">
+    <span>Posters/Flyers</span>&nbsp;<span title="901 Uses" class="use-count">(901)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Signs" href="/in/2/formats/7/signs">
+    <span>Signs</span>&nbsp;<span title="507 Uses" class="use-count">(507)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Software" href="/in/2/formats/17/software">
+    <span>Software</span>&nbsp;<span title="86 Uses" class="use-count">(86)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Tablet/iPad" href="/in/2/formats/14/tablet-ipad">
+    <span>Tablet/iPad</span>&nbsp;<span title="68 Uses" class="use-count">(68)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Web" href="/in/2/formats/3/web">
+    <span>Web</span>&nbsp;<span title="1111 Uses" class="use-count">(1111)</span></a></li>
+  
+</ul>
+
+</td>
+<td class="typeface-list">
+<h4><a href="#">Typefaces<span>▼</span></a></h4>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Abril" href="/typefaces/6593/abril">
+    <span>Abril</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Adelle" href="/typefaces/6595/adelle">
+    <span>Adelle</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Adelle Sans" href="/typefaces/10056/adelle-sans">
+    <span>Adelle Sans</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Adobe Caslon" href="/typefaces/65/adobe-caslon">
+    <span>Adobe Caslon</span>&nbsp;<span title="27 Uses" class="use-count">(27)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Akkurat" href="/typefaces/7282/akkurat">
+    <span>Akkurat</span>&nbsp;<span title="31 Uses" class="use-count">(31)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Akzidenz-Grotesk" href="/typefaces/76/akzidenz-grotesk">
+    <span>Akzidenz-Grotesk</span>&nbsp;<span title="101 Uses" class="use-count">(101)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Albertus" href="/typefaces/4857/albertus">
+    <span>Albertus</span>&nbsp;<span title="26 Uses" class="use-count">(26)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Alright Sans" href="/typefaces/6619/alright-sans">
+    <span>Alright Sans</span>&nbsp;<span title="28 Uses" class="use-count">(28)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Alternate Gothic" href="/typefaces/1591/alternate-gothic">
+    <span>Alternate Gothic</span>&nbsp;<span title="45 Uses" class="use-count">(45)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under ITC American Typewriter" href="/typefaces/10/itc-american-typewriter">
+    <span>ITC American Typewriter</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Antenna" href="/typefaces/2167/antenna">
+    <span>Antenna</span>&nbsp;<span title="34 Uses" class="use-count">(34)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Antique Olive" href="/typefaces/1140/antique-olive">
+    <span>Antique Olive</span>&nbsp;<span title="31 Uses" class="use-count">(31)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Aperçu" href="/typefaces/7380/apercu">
+    <span>Aperçu</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Archer" href="/typefaces/7219/archer">
+    <span>Archer</span>&nbsp;<span title="25 Uses" class="use-count">(25)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Arial" href="/typefaces/4869/arial">
+    <span>Arial</span>&nbsp;<span title="51 Uses" class="use-count">(51)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under ITC Avant Garde Gothic" href="/typefaces/1143/itc-avant-garde-gothic">
+    <span>ITC Avant Garde Gothic</span>&nbsp;<span title="72 Uses" class="use-count">(72)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Avenir" href="/typefaces/3409/avenir">
+    <span>Avenir</span>&nbsp;<span title="32 Uses" class="use-count">(32)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Avenir Next" href="/typefaces/3770/avenir-next">
+    <span>Avenir Next</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Baskerville" href="/typefaces/1145/baskerville">
+    <span>Baskerville</span>&nbsp;<span title="28 Uses" class="use-count">(28)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF Bau" href="/typefaces/17/ff-bau">
+    <span>FF Bau</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Bello" href="/typefaces/6692/bello">
+    <span>Bello</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Benton Sans" href="/typefaces/106/benton-sans">
+    <span>Benton Sans</span>&nbsp;<span title="62 Uses" class="use-count">(62)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Bickham Script" href="/typefaces/3792/bickham-script">
+    <span>Bickham Script</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Block" href="/typefaces/7572/block">
+    <span>Block</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Bodoni" href="/typefaces/229/bodoni">
+    <span>Bodoni</span>&nbsp;<span title="52 Uses" class="use-count">(52)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Bookman" href="/typefaces/230/bookman">
+    <span>Bookman</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Brandon Grotesque" href="/typefaces/37/brandon-grotesque">
+    <span>Brandon Grotesque</span>&nbsp;<span title="44 Uses" class="use-count">(44)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Brothers" href="/typefaces/26/brothers">
+    <span>Brothers</span>&nbsp;<span title="24 Uses" class="use-count">(24)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Bureau Grot" href="/typefaces/32/bureau-grot">
+    <span>Bureau Grot</span>&nbsp;<span title="33 Uses" class="use-count">(33)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Century Expanded" href="/typefaces/7759/century-expanded">
+    <span>Century Expanded</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+</ul>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Chronicle" href="/typefaces/7345/chronicle">
+    <span>Chronicle</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Clarendon" href="/typefaces/248/clarendon">
+    <span>Clarendon</span>&nbsp;<span title="55 Uses" class="use-count">(55)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Compacta" href="/typefaces/1721/compacta">
+    <span>Compacta</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Cooper Black" href="/typefaces/7357/cooper-black">
+    <span>Cooper Black</span>&nbsp;<span title="57 Uses" class="use-count">(57)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Copperplate Gothic" href="/typefaces/3895/copperplate-gothic">
+    <span>Copperplate Gothic</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Corvinus" href="/typefaces/7313/corvinus">
+    <span>Corvinus</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Dala Floda" href="/typefaces/7291/dala-floda">
+    <span>Dala Floda</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Davida" href="/typefaces/6793/davida">
+    <span>Davida</span>&nbsp;<span title="30 Uses" class="use-count">(30)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF DIN" href="/typefaces/2422/ff-din">
+    <span>FF DIN</span>&nbsp;<span title="50 Uses" class="use-count">(50)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Eagle" href="/typefaces/2215/eagle">
+    <span>Eagle</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Eames Century Modern" href="/typefaces/36/eames-century-modern">
+    <span>Eames Century Modern</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Elephant (Alias)" href="/typefaces/116/elephant-alias">
+    <span>Elephant (Alias)</span>&nbsp;<span title="29 Uses" class="use-count">(29)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Euclid Flex" href="/typefaces/31438/euclid-flex">
+    <span>Euclid Flex</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Eurostile" href="/typefaces/3424/eurostile">
+    <span>Eurostile</span>&nbsp;<span title="39 Uses" class="use-count">(39)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FB Titling Gothic" href="/typefaces/23/fb-titling-gothic">
+    <span>FB Titling Gothic</span>&nbsp;<span title="36 Uses" class="use-count">(36)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Flama" href="/typefaces/7288/flama">
+    <span>Flama</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Folio" href="/typefaces/1758/folio">
+    <span>Folio</span>&nbsp;<span title="21 Uses" class="use-count">(21)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Founders Grotesk" href="/typefaces/50/founders-grotesk">
+    <span>Founders Grotesk</span>&nbsp;<span title="26 Uses" class="use-count">(26)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under ITC Franklin Gothic" href="/typefaces/1763/itc-franklin-gothic">
+    <span>ITC Franklin Gothic</span>&nbsp;<span title="25 Uses" class="use-count">(25)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Franklin Gothic" href="/typefaces/35/franklin-gothic">
+    <span>Franklin Gothic</span>&nbsp;<span title="82 Uses" class="use-count">(82)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Freight Sans" href="/typefaces/2773/freight-sans">
+    <span>Freight Sans</span>&nbsp;<span title="19 Uses" class="use-count">(19)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Freight Text" href="/typefaces/2774/freight-text">
+    <span>Freight Text</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Frutiger" href="/typefaces/3481/frutiger">
+    <span>Frutiger</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Futura" href="/typefaces/4/futura">
+    <span>Futura</span>&nbsp;<span title="351 Uses" class="use-count">(351)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Futura Black" href="/typefaces/7655/futura-black">
+    <span>Futura Black</span>&nbsp;<span title="41 Uses" class="use-count">(41)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Futura Display" href="/typefaces/4070/futura-display">
+    <span>Futura Display</span>&nbsp;<span title="19 Uses" class="use-count">(19)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Garage Gothic" href="/typefaces/2232/garage-gothic">
+    <span>Garage Gothic</span>&nbsp;<span title="26 Uses" class="use-count">(26)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Geogrotesque" href="/typefaces/98/geogrotesque">
+    <span>Geogrotesque</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Georgia" href="/typefaces/70/georgia">
+    <span>Georgia</span>&nbsp;<span title="54 Uses" class="use-count">(54)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Gill Kayo" href="/typefaces/7273/gill-kayo">
+    <span>Gill Kayo</span>&nbsp;<span title="49 Uses" class="use-count">(49)</span></a></li>
+</ul>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Gill Sans" href="/typefaces/45/gill-sans">
+    <span>Gill Sans</span>&nbsp;<span title="88 Uses" class="use-count">(88)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Gotham" href="/typefaces/20/gotham">
+    <span>Gotham</span>&nbsp;<span title="109 Uses" class="use-count">(109)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Graphik" href="/typefaces/57/graphik">
+    <span>Graphik</span>&nbsp;<span title="28 Uses" class="use-count">(28)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under GT Walsheim" href="/typefaces/7622/gt-walsheim">
+    <span>GT Walsheim</span>&nbsp;<span title="26 Uses" class="use-count">(26)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Harbour" href="/typefaces/118/harbour">
+    <span>Harbour</span>&nbsp;<span title="26 Uses" class="use-count">(26)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Harriet Series" href="/typefaces/7261/harriet-series">
+    <span>Harriet Series</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Hellenic Wide" href="/typefaces/7224/hellenic-wide">
+    <span>Hellenic Wide</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Helvetica" href="/typefaces/44/helvetica">
+    <span>Helvetica</span>&nbsp;<span title="239 Uses" class="use-count">(239)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Helvetica Condensed" href="/typefaces/10527/helvetica-condensed">
+    <span>Helvetica Condensed</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Hobo" href="/typefaces/4015/hobo">
+    <span>Hobo</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Interstate" href="/typefaces/2247/interstate">
+    <span>Interstate</span>&nbsp;<span title="66 Uses" class="use-count">(66)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Kabel" href="/typefaces/4190/kabel">
+    <span>Kabel</span>&nbsp;<span title="31 Uses" class="use-count">(31)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Kabel Black" href="/typefaces/7697/kabel-black">
+    <span>Kabel Black</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Knockout" href="/typefaces/7238/knockout">
+    <span>Knockout</span>&nbsp;<span title="63 Uses" class="use-count">(63)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under LL Brown" href="/typefaces/7385/ll-brown">
+    <span>LL Brown</span>&nbsp;<span title="30 Uses" class="use-count">(30)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under LL Circular" href="/typefaces/31411/ll-circular">
+    <span>LL Circular</span>&nbsp;<span title="30 Uses" class="use-count">(30)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Lydian" href="/typefaces/6/lydian">
+    <span>Lydian</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Lyon" href="/typefaces/92/lyon">
+    <span>Lyon</span>&nbsp;<span title="24 Uses" class="use-count">(24)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF Mark" href="/typefaces/31638/ff-mark">
+    <span>FF Mark</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Mercury" href="/typefaces/7534/mercury">
+    <span>Mercury</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF Meta" href="/typefaces/2498/ff-meta">
+    <span>FF Meta</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF Meta Serif" href="/typefaces/2499/ff-meta-serif">
+    <span>FF Meta Serif</span>&nbsp;<span title="21 Uses" class="use-count">(21)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Miller" href="/typefaces/100/miller">
+    <span>Miller</span>&nbsp;<span title="31 Uses" class="use-count">(31)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Minion" href="/typefaces/4291/minion">
+    <span>Minion</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Mistral" href="/typefaces/3452/mistral">
+    <span>Mistral</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Monotype Grotesque" href="/typefaces/18/monotype-grotesque">
+    <span>Monotype Grotesque</span>&nbsp;<span title="31 Uses" class="use-count">(31)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Mrs Eaves" href="/typefaces/2050/mrs-eaves">
+    <span>Mrs Eaves</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under National" href="/typefaces/7275/national">
+    <span>National</span>&nbsp;<span title="21 Uses" class="use-count">(21)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Neue Helvetica" href="/typefaces/3483/neue-helvetica">
+    <span>Neue Helvetica</span>&nbsp;<span title="76 Uses" class="use-count">(76)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Neutraface" href="/typefaces/62/neutraface">
+    <span>Neutraface</span>&nbsp;<span title="46 Uses" class="use-count">(46)</span></a></li>
+</ul>
+<ul>
+	<li><a class="entity-use-link" title="View all Uses filed under Neuzeit S" href="/typefaces/7388/neuzeit-s">
+    <span>Neuzeit S</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under News Gothic" href="/typefaces/303/news-gothic">
+    <span>News Gothic</span>&nbsp;<span title="47 Uses" class="use-count">(47)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Open Sans" href="/typefaces/7520/open-sans">
+    <span>Open Sans</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Optima" href="/typefaces/3359/optima">
+    <span>Optima</span>&nbsp;<span title="28 Uses" class="use-count">(28)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Palatino" href="/typefaces/3361/palatino">
+    <span>Palatino</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Plantin" href="/typefaces/4376/plantin">
+    <span>Plantin</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Proxima Nova" href="/typefaces/4827/proxima-nova">
+    <span>Proxima Nova</span>&nbsp;<span title="55 Uses" class="use-count">(55)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Replica" href="/typefaces/7436/replica">
+    <span>Replica</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Rockwell" href="/typefaces/5086/rockwell">
+    <span>Rockwell</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under FF Scala Sans" href="/typefaces/94/ff-scala-sans">
+    <span>FF Scala Sans</span>&nbsp;<span title="19 Uses" class="use-count">(19)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under ITC Serif Gothic" href="/typefaces/1907/itc-serif-gothic">
+    <span>ITC Serif Gothic</span>&nbsp;<span title="41 Uses" class="use-count">(41)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Skolar" href="/typefaces/6614/skolar">
+    <span>Skolar</span>&nbsp;<span title="18 Uses" class="use-count">(18)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under ITC Souvenir" href="/typefaces/1913/itc-souvenir">
+    <span>ITC Souvenir</span>&nbsp;<span title="25 Uses" class="use-count">(25)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Sweet Sans" href="/typefaces/6396/sweet-sans">
+    <span>Sweet Sans</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Telefon" href="/typefaces/10206/telefon">
+    <span>Telefon</span>&nbsp;<span title="25 Uses" class="use-count">(25)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Tempo" href="/typefaces/4539/tempo">
+    <span>Tempo</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Tiempos" href="/typefaces/48/tiempos">
+    <span>Tiempos</span>&nbsp;<span title="32 Uses" class="use-count">(32)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Times" href="/typefaces/52/times">
+    <span>Times</span>&nbsp;<span title="22 Uses" class="use-count">(22)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Times New Roman" href="/typefaces/5117/times-new-roman">
+    <span>Times New Roman</span>&nbsp;<span title="42 Uses" class="use-count">(42)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Trade Gothic" href="/typefaces/33/trade-gothic">
+    <span>Trade Gothic</span>&nbsp;<span title="71 Uses" class="use-count">(71)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Trim" href="/typefaces/7584/trim">
+    <span>Trim</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Tungsten" href="/typefaces/7344/tungsten">
+    <span>Tungsten</span>&nbsp;<span title="20 Uses" class="use-count">(20)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Ultra Bodoni" href="/typefaces/31718/ultra-bodoni">
+    <span>Ultra Bodoni</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under unidentified typeface" href="/typefaces/7251/unidentified-typeface">
+    <span>unidentified typeface</span>&nbsp;<span title="105 Uses" class="use-count">(105)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Univers" href="/typefaces/1160/univers">
+    <span>Univers</span>&nbsp;<span title="113 Uses" class="use-count">(113)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Univers Ultra Condensed" href="/typefaces/10409/univers-ultra-condensed">
+    <span>Univers Ultra Condensed</span>&nbsp;<span title="16 Uses" class="use-count">(16)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Venus" href="/typefaces/16/venus">
+    <span>Venus</span>&nbsp;<span title="17 Uses" class="use-count">(17)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Verlag" href="/typefaces/25/verlag">
+    <span>Verlag</span>&nbsp;<span title="29 Uses" class="use-count">(29)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Whitney" href="/typefaces/7392/whitney">
+    <span>Whitney</span>&nbsp;<span title="23 Uses" class="use-count">(23)</span></a></li>
+	<li><a class="entity-use-link" title="View all Uses filed under Windsor" href="/typefaces/1808/windsor">
+    <span>Windsor</span>&nbsp;<span title="30 Uses" class="use-count">(30)</span></a></li>
+</ul>
+<ul>
+  
+<li id="more-typefaces">These are the most common typefaces in the database, but there are many more. <a id="focus-search" href="/search/advanced">Try a search!</a></li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+</div><!-- #use-navigation --><div id="main">
+<div class="standard-content">
+<h1>The server returned a 404 Not Found error.</h1>
+<p>
+   Ouch, something broke. Please send us an email and let us know
+    what you were doing when this error occurred. We will fix it as soon
+    as possible. Sorry for any inconvenience caused.
+</p>
+</div>
+</div><!-- main -->
+    <ul id="footer">
+		<li>
+		<ul>
+			<li><a href="/about">About</a></li>
+			<li><a href="/faq">FAQ</a></li>
+		</ul>
+	</li>
+	<li>
+		<ul>
+			<li><a href="/colophon/">Colophon</a></li>
+			<li><a href="/terms-and-conditions-of-use/">Terms of Use</a></li>
+		</ul>
+	</li>
+	<li><a href="http://twitter.com/FontsInUse">@FontsInUse</a></li>
+	<li><a href="/contact-us">Contact</a></li>
+	<li><a href="/sponsors/">Sponsors</a></li>
+	<li id="footer-rss">
+		<ul>
+			<li>RSS Feeds:</li>
+			<li><a title="Main Fonts In Use RSS Feed" href="http://feeds.feedburner.com/FontsInUseAll">All Uses</a></li>
+			<li><a title="Staff Picks only Fonts In Use RSS Feed" href="http://feeds.feedburner.com/FontsInUsePicks">Staff Picks</a></li>
+			<li><a title="Comments from Fonts In Use RSS Feed" href="http://feeds.feedburner.com/FontsInUseComments">Comments</a></li>
+			<li><a title="Blog posts RSS" href="http://feeds.feedburner.com/FontsInUse">Blog only</a></li>
+		</ul>
+	</li>
+	<li id="footer-copyright"><span id="fpreload1">.</span>&copy;&nbsp;2010&#8211;2016</li>
+</ul>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="http://assets.fontsinuse.com/js/fiu/sitewide_foot.js?v=4bd92f31944dce1ba33d2766ff51368c"></script>
+</div><!-- site-container -->
+</body>
+</html>

@@ -1,9 +1,3 @@
-"""Script to transfer data collected about uses (fiu_use_list) into the font dict (fiu_font_dict) as of July 19, 2016
-"""
-
-# STEP 1 : for each use,
-# - for each font in use, add industries and formats to font dict
-# - add a link
 
 from collections import Counter
 import json
@@ -23,6 +17,7 @@ def create_link_counts():
     counter_links = Counter(single_link_list)
     print "Total of " + str(len(counter_links.keys())) + " links in graph"
 
+    # convert Counter for export and d3 format
     graph_links = []
     for key in sorted(counter_links.keys()):
         graph_links.append({"source":key[0], "target": key[1], "value": counter_links[key]})
@@ -34,6 +29,7 @@ def create_font_counts():
 
     with open('fiu_use_list.json') as json_list:
         use_list = json.load(json_list)
+
 
     append_uses = []
 
@@ -47,6 +43,39 @@ def create_font_counts():
         json.dump(counter_obj, outfile)
 
 
+def augment_dict_and_create_nodes():
+
+    with open('fiu_use_list.json') as json_list:
+        use_list = json.load(json_list)
+
+    with open('font_use_counts.json') as counts:
+        counts_dict = json.load(counts)
+
+    with open('fiu_fonts_dict_augmented.json') as dict:
+        fonts_dict = json.load(dict)
+
+    for use in use_list:
+        for typeface in use['typefaces']:
+            fonts_dict[typeface]["industries"] = use["industries"]
+            fonts_dict[typeface]["formats"] = use["formats"]
+            fonts_dict[typeface]["uses"] = counts_dict[typeface]
+
+    nodes_list = []
+
+    for key in fonts_dict.keys():
+        nodes_list.append(fonts_dict[key])
+
+    with open('graph_nodes.json','w') as outfile:
+        json.dump(nodes_list,outfile)
+
+
+            # new_type_dict = fonts_dict['typeface']
+            # new_type_dict["industries"] = use["industries"]
+            # new_type_dict["formats"] = use["formats"]
+            # fonts_dict['typeface'] = new_type_dict
+
+
 if __name__ == '__main__':
    #create_font_counts() # goal is to create a Counter object (dict) with "fontname: use-count" as "key: value" pairs.
-    create_link_counts() # goal is to create a Counter Object (dict) with "(font1,font2): count" pairs
+   #create_link_counts() # goal is to create a Counter Object (dict) with "(font1,font2): count" pairs
+   augment_dict_and_create_nodes() # goal is to augment current font_dict_augmented with new info from font_use_counts

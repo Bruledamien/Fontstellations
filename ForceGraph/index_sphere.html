@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+<head>
+    <title>Spherical Force-Directed Layout</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <!--<script src="/js/d3.v3.min.js"></script>-->
+    <!--<script src="/js/dat-gui/build/dat.gui.js"></script> -->
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        path.node {
+            stroke-width: 1.5px;
+        }
 
-    .links line {
-        stroke: #999;
-        stroke-opacity: 0.6;
-    }
-
-    .nodes circle {
-        stroke: #fff;
-        stroke-width: 1.5px;
-    }
-
-</style>
-<svg width="2000" height="1800" ></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
-<script>
+        path.link {
+            stroke: #999;
+            fill-opacity: 0
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
     var projections = {
-        "Albers": d3.geoAlbers(),
-        "Azimuthal Equal Area": d3.geoAzimuthalEqualArea(),
-        "Azimuthal Eqidistant": d3.geoAzimuthalEquidistant(),
-        "Conic Conformal": d3.geoConicConformal(),
-        "Conic Equal Area": d3.geoConicEqualArea(),
-        "Conic Equidistant": d3.geoConicEquidistant(),
-        "Eqirectangular": d3.geoEquirectangular(),
-        "Gnomonic": d3.geoGnomonic(),
-        "Mercator": d3.geoMercator(),
-        "Orthographic": d3.geoOrthographic(),
-        "Stereographic": d3.geoStereographic(),
-        "Transverse Mercator": d3.geoTransverseMercator(),
+        "Albers": d3.geo.albers(),
+        "Azimuthal Equal Area": d3.geo.azimuthalEqualArea(),
+        "Azimuthal Eqidistant": d3.geo.azimuthalEquidistant(),
+        "Conic Conformal": d3.geo.conicConformal(),
+        "Conic Equal Area": d3.geo.conicEqualArea(),
+        "Conic Equidistant": d3.geo.conicEquidistant(),
+        "Eqirectangular": d3.geo.equirectangular(),
+        "Gnomonic": d3.geo.gnomonic(),
+        "Mercator": d3.geo.mercator(),
+        "Orthographic": d3.geo.orthographic(),
+        "Stereographic": d3.geo.stereographic(),
+        "Transverse Mercator": d3.geo.transverseMercator(),
     };
     var config = { "projection": "Orthographic", "clip": true, "friction": .9, "linkStrength": 1, "linkDistance": 20, "charge": 30, "gravity": .1, "theta": .8 };
     var gui = new dat.GUI();
@@ -48,7 +54,7 @@
         path.projection(projections[value])
         return
         if(value == 'rectangular') {
-            path = d3.geoPath().projection(function(coordinates){
+            path = d3.geo.path().projection(function(coordinates){
                 console.log(coordinates[0], coordinates[1])
                 return [
                     wrapIndex(coordinates[0], width),
@@ -58,59 +64,117 @@
             config['clip'] = false
         } else {
             projection.mode(value)
-            path = d3.geoPath().projection(projection)
+            path = d3.geo.path().projection(projection)
         }
 
         force.start()
     });
 
-//    var clipChanger = gui.add(config, "clip").listen();
-//    clipChanger.onChange(function(value) {
-//        projection.clipAngle(value ? 90 : null)
-//        force.start()
-//    });
-//
+    var clipChanger = gui.add(config, "clip").listen();
+    clipChanger.onChange(function(value) {
+        projection.clipAngle(value ? 90 : null)
+        force.start()
+    });
+
     var fl = gui.addFolder('Force Layout');
     fl.open()
-//
-//    var frictionChanger = fl.add(config, "friction", 0, 1);
-//    frictionChanger.onChange(function(value) {
-//        force.friction(value)
-//        force.start()
-//    });
-//
+
+    var frictionChanger = fl.add(config, "friction", 0, 1);
+    frictionChanger.onChange(function(value) {
+        force.friction(value)
+        force.start()
+    });
+
     var linkDistanceChanger = fl.add(config, "linkDistance", 0, 400);
     linkDistanceChanger.onChange(function(value) {
-        simulation.force("link").distance(value)
-        simulation.alphaTarget(0.4).restart()
+        force.linkDistance(value)
+        force.start()
     });
 
     var linkStrengthChanger = fl.add(config, "linkStrength", 0, 1);
     linkStrengthChanger.onChange(function(value) {
-        simulation.force("link").strength(value)
-        //1 / Math.min(count(link.source), count(link.target))
-        simulation.alphaTarget(0.4).restart()
+        force.linkStrength(value)
+        force.start()
     });
 
-    var chargeChanger = fl.add(config,"charge", 0, 100);
+    var chargeChanger = fl.add(config,"charge", 0, 500);
     chargeChanger.onChange(function(value) {
-        simulation.force("charge").strength(-value)
-        simulation.alphaTarget(0.4).restart()
+        force.charge(-value)
+        force.start()
     });
 
-//    var gravityChanger = fl.add(config,"gravity", 0, 1);
-//    gravityChanger.onChange(function(value) {
-//        simulation.force("center").strength(value)
-//        simulation.alphaTarget(0.4).restart()
-//    });
-//
-//    var thetaChanger = fl.add(config,"theta", 0, 1);
-//    thetaChanger.onChange(function(value) {
-//        force.theta(value)
-//        force.start()
-//    });
+    var gravityChanger = fl.add(config,"gravity", 0, 1);
+    gravityChanger.onChange(function(value) {
+        force.gravity(value)
+        force.start()
+    });
 
-     // ------- Beginning of straight links
+    var thetaChanger = fl.add(config,"theta", 0, 1);
+    thetaChanger.onChange(function(value) {
+        force.theta(value)
+        force.start()
+    });
+
+    var width = window.innerWidth,
+            height = window.innerHeight - 5,
+            fill = d3.scale.category20(),
+            nodes = [{x: width/2, y: height/2}],
+            links = [];
+
+    var projection = projections[config["projection"]]
+            .scale(height/2)
+            .translate([(width/2)-125, height/2])
+            .clipAngle(config["clip"] ? 90 : null)
+
+    var path = d3.geo.path()
+            .projection(projection)
+
+    var force = d3.layout.force()
+            .linkDistance(config["linkDistance"])
+            .linkStrength(config["linkStrength"])
+            .gravity(config["gravity"])
+            .size([width, height])
+            .charge(-config["charge"]);
+
+    var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .call(d3.behavior.drag()
+                    .origin(function() { var r = projection.rotate(); return {x: 2 * r[0], y: -2 * r[1]}; })
+                    .on("drag", function() { force.start(); var r = [d3.event.x / 2, -d3.event.y / 2, projection.rotate()[2]]; t0 = Date.now(); origin = r; projection.rotate(r); }))
+
+    for(x=0;x<100;x++){
+        source = nodes[~~(Math.random() * nodes.length)]
+        target = {x: source.x + Math.random(), y: source.y + Math.random(), group: Math.random()}
+        links.push({source: source, target: target})
+        nodes.push(target)
+    }
+
+    var link = svg.selectAll("path.link")
+            .data(links)
+            .enter().append("path").attr("class", "link")
+
+    var node = svg.selectAll("path.node")
+            .data(nodes)
+            .enter().append("path").attr("class", "node")
+            .style("fill", function(d) { return fill(d.group); })
+            .style("stroke", function(d) { return d3.rgb(fill(d.group)).darker(); })
+            .call(force.drag);
+
+    force
+            .nodes(nodes)
+            .links(links)
+            .on("tick", tick)
+            .start();
+
+    function tick() {
+        node.attr("d", function(d) { var p = path({"type":"Feature","geometry":{"type":"Point","coordinates":[d.x, d.y]}}); return p ? p : 'M 0 0' });
+        link.attr("d", function(d) { var p = path({"type":"Feature","geometry":{"type":"LineString","coordinates":[[d.source.x, d.source.y],[d.target.x, d.target.y]]}}); return p ? p : 'M 0 0' });
+    }
+
+
+
+    // ------- Beginning of straight links
     var svg = d3.select("svg"),
             width = +svg.attr("width"),
             height = +svg.attr("height");
@@ -123,12 +187,12 @@
             .force("charge", d3.forceManyBody())
             .force("center", d3.forceCenter(width / 2, height / 2));
 
-//    var force = d3.layout.force()
-//            .linkDistance(config["linkDistance"])
-//            .linkStrength(config["linkStrength"])
-//            .gravity(config["gravity"])
-//            .size([width, height])
-//            .charge(-config["charge"]);
+    //    var force = d3.layout.force()
+    //            .linkDistance(config["linkDistance"])
+    //            .linkStrength(config["linkStrength"])
+    //            .gravity(config["gravity"])
+    //            .size([width, height])
+    //            .charge(-config["charge"]);
 
     d3.json("graph_links_2.json", function(error, graph_links) {
 
@@ -236,4 +300,9 @@
         d.fy = null;
     }
 
+
+
 </script>
+</body>
+</body>
+</html>

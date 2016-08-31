@@ -3,7 +3,7 @@
 <style>
 
     .links line {
-        stroke: #999;
+        stroke: #FFF;
         /*stroke-opacity: 0.6;*/
     }
 
@@ -12,18 +12,7 @@
         stroke-width: 1.5px;
     }
 
-    .nodes image {
-        -webkit-filter: invert(1);
-        filter: invert(1);
-    }
-    #map1 {
-        width:960px;
-        height:100px; background:cyan;
-    }
-    #map2 {
-        width:960px;
-        height:100px; background:red;
-    }
+
 </style>
 
 
@@ -32,8 +21,6 @@
     <button type="button" onclick="searchNode()">Search</button>
 </div>
 
-<!--<div id='map1'></div>-->
-<!--<div id='map2'></div>-->
 <svg id="viz"></svg>
 
 
@@ -46,7 +33,7 @@
 
 <script>
 
-    var config = { "velocityDecay": .6, "linkStrength": 0.6, "linkDistance": 5, "charge": 50, "gravity": .1, "theta": .8, "links":true };
+    var config = { "velocityDecay": .6, "linkStrength": 0.6, "linkDistance": 5, "charge": 100, "gravity": .1, "theta": .8, "links":true };
     var gui = new dat.GUI();
 
     var fl = gui.addFolder('Force Layout');
@@ -72,7 +59,7 @@
         simulation.alphaTarget(0.1).restart()
     });
 
-    var chargeChanger = fl.add(config,"charge", 30, 300);
+    var chargeChanger = fl.add(config,"charge", 30, 200);
     chargeChanger.onChange(function(value) {
         simulation.force("charge").strength(-value)
         simulation.alphaTarget(0.4).restart()
@@ -93,7 +80,7 @@
     // ------- Beginning of straight links
     //var width = window.innerWidth, height = window.innerHeight;
 
-    var default_link_opacity = 0.9;
+    var default_link_opacity = 0.4;
 
     var w = window,
             d = document,
@@ -118,8 +105,8 @@
     var backgrd = svg.append("rect")
             .attr("width", width)
             .attr("height", height)
-            .style("fill", "white")
-            .style("opacity", 0.2)
+            .style("fill", "black")
+            .style("opacity", 1)
             .style("pointer-events", "all")
             .on("click", unclick);
 
@@ -140,68 +127,14 @@
 
 
     var zoom = d3.zoom()
-            .scaleExtent([0.2, 4])
+            .scaleExtent([0.2, 5])
             .on("zoom", zoomed);
 
     // look at zoom.extent and zoom.translateExtent
 
     svg.call(zoom); // why SVG and not g ?
 
-    //------------------------ CLICK STUFF ----------------------
-
-    // Copied from M. Bostock's d3 V3, since this function disappeared from V4.
-    // https://groups.google.com/forum/#!topic/d3-js/86_jy82NNSY
-    d3.rebind = function(target, source) {
-        var i = 1, n = arguments.length, method;
-        while (++i < n) target[method = arguments[i]] = d3_rebind(target, source, source[method]);
-        return target;
-    };
-    function d3_rebind(target, source, method) {
-        return function() {
-            var value = method.apply(source, arguments);
-            return value === source ? target : value;
-        };
-    }
-
-
-//    function clickcancel() {
-//        // we want to a distinguish single/double click
-//        // details http://bl.ocks.org/couchand/6394506
-//        var event = d3.dispatch('click', 'dblclick');
-//
-//        function cc(selection) {
-//            var down, tolerance = 5, last, wait = null, args;
-//            // euclidean distance
-//            function dist(a, b) {
-//                return Math.sqrt(Math.pow(a[0] - b[0], 2), Math.pow(a[1] - b[1], 2));
-//            }
-//            selection.on('mousedown', function() {
-//                down = d3.mouse(document.body);
-//                last = +new Date();
-//                args = arguments;
-//            });
-//            selection.on('mouseup', function() {
-//                if (dist(down, d3.mouse(document.body)) > tolerance) {
-//                    return;
-//                } else {
-//                    if (wait) {
-//                        window.clearTimeout(wait);
-//                        wait = null;
-//                        event.apply('dblclick', this, args); //changed from original (d3 v3)
-//                    } else {
-//                        wait = window.setTimeout((function() { //changed
-//                            return function() {
-//                                event.apply('click', this, args);
-//                                wait = null;
-//                            };
-//                        })(), 300);
-//                    }
-//                }
-//            });
-//        };
-//        return d3.rebind(cc, event, 'on');
-//    }
-
+    //------------------------ CLICK ------------------------
 
     function center_node(d, zoomon) {
         // Moves clicked node to center ; if zoomon true, will also zoom to on node to make it readable
@@ -230,23 +163,6 @@
 //        console.log("center trsfrm", d3.zoomTransform(viz));
     }
 
-    function strenghten_links_to_node(d) {
-
-        var dcx = (width / 2 - d.x * scale);
-        var dcy = (height / 2 - d.y * scale);
-
-
-        // effectively do the transform
-        g.transition()
-                .duration(2000)
-                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
-
-        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
-        d3.select(viz).transition().duration(2000)
-                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
-
-        fadeOtherLinks(d.name);
-    }
 
     //-------- COLOR GROUPS -------------
     //var color = d3.scaleOrdinal(d3.schemeCategory20);
@@ -297,19 +213,12 @@
                     .data(graph_nodes)
                     .enter().append("image")
                     .attr("id", function(d) { return d.name; })
-                    .attr("xlink:href", function(d) { return "originals_cleaned_scaled/"+d.image_url; })
+                    .attr("xlink:href", function(d) { return "font_test/"+d.image_url; })
                     .attr("width", function(d) { return 10*Math.sqrt(d.uses); })
                     .attr("height", 50) // max-height
                     .attr("x", function(d) { return -(this.getBBox().width/2);})
                     .attr("y", function(d) { return -(this.getBBox().height/2);})
                     .on("click", function(d) { center_node(d, false)});
-
-
-//    .on("click", function(d) {
-//            var cc = clickcancel();
-//            d3.select("#" + d.name).call(cc)
-//            d3.select('#map').text(d3.select('#map').text() + 'click, ')
-//            center_node(d, false)})
 
 
             var optArray = [];
@@ -431,20 +340,6 @@
 
 
     var last_link_selection = svg.selectAll('line'); // initialized full
-
-
-//    var cc = clickcancel();
-//    d3.selectAll('image').call(cc);
-//    d3.select('#map1').call(cc);
-//    d3.select('#map2').call(cc);
-//
-//    cc.on('click', function() {
-//        d3.select('#map1').text(d3.select('#map1').text() + 'click, ');
-//    });
-//
-//    cc.on('dblclick', function() {
-//        d3.select('#map2').text(d3.select('#map2').text() + 'dblclick, ');
-//    });
 
     function unclick() {
 

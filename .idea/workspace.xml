@@ -2,38 +2,872 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="968cf860-3fad-43a8-934c-dfd966f4d041" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/deauville_reduced.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_links_cleaned.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_links_reduced.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_nodes_cleaned.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_nodes_reduced.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/index_miserables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/index_tree_tst.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/miserables.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/Typewolf/fiu_font_data_old.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/augment_font_dict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/collect_use_urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/fiu_fonts_dict.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/fiu_fonts_dict_augmented.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/fiu_scrape_fonts.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/fiu_scrape_uses.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/fiu_use_list.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_use_counts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/graph_links.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/graph_nodes.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/graph_reducer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/ordered_fonts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/ordered_links_fonts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/ordered_nodes_fonts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/scraping tests.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/scraping_steps.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/use_to_font.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/uses_urls.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/04b-19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aachen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aanaar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/abadi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/abel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/abril.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/accent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acorde.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acrom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acumin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/acuta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ad-lib.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/adelle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ademo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/adesso.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/adineue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/adroit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aero.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/affair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ag-book.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/agenda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/agile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/agilita.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/agipo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/akimoto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/akkurat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/alcala.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aldus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/alef.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aleo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/algebra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/allegro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aller.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/almeria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/altis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amalia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amazone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ambigue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amelia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amerigo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aminta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amira.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/amsi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/anca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/anchor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/andes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aniek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aniuk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/annlie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/annonce.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ano.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/anomoly.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/anorak.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/antenna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/apercu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/apollo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/appell.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/apres.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aquus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aral.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arapix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arbel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arbor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/archer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aries.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ariston.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arkona.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arnhem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arno.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arrighi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arrus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/arvo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/asap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ashbury.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aspect.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aspic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/astra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/athelas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/atlas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/atreyu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/audree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/august.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/auriol.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/aurora.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/austin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/auto-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/auto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/avalon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/avenir.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/avia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/azbuka.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/badtyp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bahnhof.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/balloon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/balto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/balzac.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/banco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bariol.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/barmeno.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bastard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/baton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/beans.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/beaux.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bebas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/belinda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/belizio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bell.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bello.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/belshaw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/belta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/belwe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bembo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/beretta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/berg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/berling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/beton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/betta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bevan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/biblon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bifur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/binner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/birch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/birra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bismuth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blado.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blaktur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blanche.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blend.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blender.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blesk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blippo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bliss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/block.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bloo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/blu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bodoni.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bologna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bolts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bombere.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bookman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bosis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bradley.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/braga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brando.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brasil.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/breuer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brewery.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brioni.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brisa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/brody.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bryant.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bullpen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bulmer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/bulo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/burbank.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/burgess.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/burko.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/buster.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/buxom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cabaret.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cabazon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cabin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cachet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cactus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cadiz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calcine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calcite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calibre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calibri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caligo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calluna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calvert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/calypso.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cambria.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/campton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/canal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/canary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/candara.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/candice.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/candida.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cantoni.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caporal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/capsa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caput.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/carmen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cartoon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caslon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/castle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cataneo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/catseye.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/catull.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caudex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/caxton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cenizas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/centaur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cera.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chaco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/channel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chantal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/charme.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/charter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chevin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chianti.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chicago.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chills.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chisel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chivo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/choc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/choplin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/chunk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cinema.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/circe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/circus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/citadel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/city.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/clavo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/clicker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/clip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cochin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/codex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/colette.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/colfax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/collis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/colroy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/coma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/company.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/compur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/contact.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cooper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/copal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/copy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cora.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/coranto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/corbel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/corona.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/coronet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cortez.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/council.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/coupe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/courier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/couteau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cp-mono.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/crank-8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/creeper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/crete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/crillee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cristal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cronos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cut-in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cutoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/cyclone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dado.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/damien.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/daphne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dapifer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/data-70.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/davida.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/days.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/delphin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/delux.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/demos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/desire.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/desyrel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/detroit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dezen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/didoni.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/didot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/din-17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/diskus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/diversa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/divina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dkt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dobra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dogma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/doko.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dolce.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dolly.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/doobie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/doric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/double.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/druk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dubius.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/duke.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/duo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/duotone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/dynamo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/eagle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ebisu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/echelon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/eckmann.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/eden.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/edita.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/effra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/egizio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/einhorn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/electra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/element.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/elena.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/elido.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/emergo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/empire.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/enabler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/enemy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/energos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/engel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/enigma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/epic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/equip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/equity.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/erbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/erotica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/escrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/eskorte.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/estilo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/estro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/europa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/exo-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fabrik.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fakir.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fakt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fanfare.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fanwood.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/farao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/farnham.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/faunus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/favorit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fazeta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fb-alix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fb-kis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/feijoa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fern-re.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ferry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fertigo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-bau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-blur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-clan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-dax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-din.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-dora.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-enzo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-fago.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-good.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-kava.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-meta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-milo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-pitu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-sari.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-sero.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-tisa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-unit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ff-yoga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/flama.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/flash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/flex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/flexo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/flood.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/florida.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fluidum.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fodor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/folio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/font4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/forelle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/forma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/formata.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/foro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fort.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/forte.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/forza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/frankie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fresco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/frustro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/fugue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/futura.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/garda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/garris.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gaviota.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gc15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gemeli.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/genath.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gentium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/georgia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/geotica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gibson.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gidole.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gimlet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/giorgio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/giza-re.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/giza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/glamour.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/glosa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/glypha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/goliath.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gotham.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gotika.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/granby.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/granger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/granite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/graphik.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grease.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grotzec.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grumpy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/grus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/gza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/haltrix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hammer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/harbour.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/harlow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/harry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/haultin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/helios.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/heroic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/herold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/history.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hoban.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hobeaux.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hobo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hogarth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/horatio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/horndon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/hotel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/huronia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ibis-re.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ibis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/icebox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/idiot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/idler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/impact.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/impress.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/imprint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/incubus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/indento.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/indigo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/infini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/inoxida.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/input.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/instant.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/intro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/iridium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/irma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/iskra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/italia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jaakko.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jackson.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jacno.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jannon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jazz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jigsaw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/joanna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jockey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/joe182.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/joos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/journal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jubilat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jude.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/juliana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/julien.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/jupiter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kabel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kada.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kade.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kailey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/karbon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/karla.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/karmina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/karnak.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/karol.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kefa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kepler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/key.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kicker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/klang.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/klimax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/klint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/klute.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/koloss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/komu-a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/komu-b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/krul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/kumla.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lars.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lato.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lava.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/league.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lekton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lelo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lewis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/libra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/life.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lily.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lince.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/linear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lingua.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lithos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/livory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/liza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/loupot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lovelo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ludwig.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lunica.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lust.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lydian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lyno.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/lyon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/m-1m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/maax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/macha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/macula.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mafra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/magion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mahlau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/maiola.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/malaga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/maple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/marcia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/marian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/marq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/martha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/massif.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/matrix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/matura.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/maven.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mayo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mckoy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mekon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/melior.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/menlo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/meran.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/meriva.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/metric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/metro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/metsys.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/michel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/micr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mija.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mikro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/milano.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/milio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/millar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/miller.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/millie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/minion.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mir.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/miso.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/modus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mommie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/mosaik.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/motor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/multi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/muriza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/museo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/myriad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/naiv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nantes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nara.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nassim.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/naste.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ne10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/neptun.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nexa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nitti.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nivea.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nobel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nobile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nofret.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/nomada.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/none.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/novel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/novia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/oberon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/obese.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/oblong.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ocr-a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ocr-b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/octant.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/odesta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/odile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/odin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ogg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ohm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ollie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/omnes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ondine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/onyx.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/optex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/optima.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/orator.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/orly.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/orplid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/oswald.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/outage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/output.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/oxford.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/oxtail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/palais.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pampam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/parade.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/parry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pascal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pdu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/peggs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pepita.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pepone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/perec.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/perla.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/piek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pilot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pipo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pique.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pitch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pixtur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/plain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/plak.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/plau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/plaza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pluto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/poleno.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pollen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pona.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/poplar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/port.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/poster.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/prata.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pratt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/praxis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/precis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/prensa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/primot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/prisma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/profil.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/proza.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pump.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/puncho.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/pyke.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/quarto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/questa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/queue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/quick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/radio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rasmus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rather.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ratio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ravie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/razor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/recta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/reina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rekja.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/relay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/remi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/remo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/retina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/retiro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/revue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rhode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ritmo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/roboto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/robur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/robust.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rocky.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/roco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/roma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/romain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/romana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/romic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rondka.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rondo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rongel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ronnia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rooney.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rosart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/router.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/roxy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rubens.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rukola.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/rutz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ryumin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/s-l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sabon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/saline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/salut.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sansa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/saphir.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sarre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/satura.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/satyr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sauna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/schoko.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/scout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/scribe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/secca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/segoe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/selavy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/serifa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/serous.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/shift.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/side-a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sigma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/signal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/signo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/signum.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/simple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sinova.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sintex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sintra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sirba.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/siri.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/siruca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sitka.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/skolar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/slogan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sloop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/smoke.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/snv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sofia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/soho.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/soleil.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/soraya.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sphinx.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stahl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/static.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stilla.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stolzl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/stymie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/susa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sverre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/swift.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sylvia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/syntax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/sys.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/t-star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tabac.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/taca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tahoma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tango.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/taroca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tasse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/taz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/teimer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tekton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tempo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tenez.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tenso.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/texta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/thalia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/themix.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tiina.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tilda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tilde.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/times.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/toledo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tomate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tonal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/torino.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/torque.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/tpduro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/trajan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/triade.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/trigot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/trilby.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/trim.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/trola.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/turnip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/twin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/u8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/ubuntu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/umbra.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/uomo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/urbana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/uscita.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/uscore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/utopia.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/valuco.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vaud.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/veneer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/venice.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/venus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/verlag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/versa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vesper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vexier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vibro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/videon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vineta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vinter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vinyl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/virna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/visa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/visual.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vmr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/vogue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/volta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/voyage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/wallau.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/wave.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/webb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/weiss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/wendy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/wigrum.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/xaloc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/xtreem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zarana.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zelek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zenon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zigzag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zipper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForceGraph/Fonts/font_pngs/zocalo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/chart_mollie.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/mollies_viz.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/index.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/index_sphere.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/index_sphere.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/index_straight.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/index_straight.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs.py" afterPath="$PROJECT_DIR$/Scripts/proccess png/resize_and_crop_pngs.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs_smart.py" afterPath="$PROJECT_DIR$/Scripts/proccess png/resize_and_crop_pngs_smart.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ForceGraph/revert_and_clean_pngs.py" afterPath="$PROJECT_DIR$/Scripts/proccess png/revert_and_clean_pngs.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/augment_font_dict.py" afterPath="$PROJECT_DIR$/Scripts/process json/augment_font_dict.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/collect_use_urls.py" afterPath="$PROJECT_DIR$/Scripts/scraping/collect_use_urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/fiu_fonts_dict.json" afterPath="$PROJECT_DIR$/Scripts/data/fiu_fonts_dict.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/fiu_fonts_dict_augmented.json" afterPath="$PROJECT_DIR$/Scripts/data/fiu_fonts_dict_augmented.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/fiu_scrape_fonts.py" afterPath="$PROJECT_DIR$/Scripts/scraping/fiu_scrape_fonts.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/fiu_scrape_uses.py" afterPath="$PROJECT_DIR$/Scripts/scraping/fiu_scrape_uses.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/fiu_use_list.json" afterPath="$PROJECT_DIR$/Scripts/data/fiu_use_list.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/font_use_counts.json" afterPath="$PROJECT_DIR$/Scripts/data/font_use_counts.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/graph_links.json" afterPath="$PROJECT_DIR$/Scripts/data/graph_links.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/graph_nodes.json" afterPath="$PROJECT_DIR$/Scripts/data/graph_nodes.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/graph_reducer.py" afterPath="$PROJECT_DIR$/Scripts/process json/graph_reducer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/ordered_fonts.json" afterPath="$PROJECT_DIR$/Scripts/data/ordered_fonts.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/ordered_links_fonts.json" afterPath="$PROJECT_DIR$/Scripts/data/ordered_links_fonts.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/ordered_nodes_fonts.json" afterPath="$PROJECT_DIR$/Scripts/data/ordered_nodes_fonts.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/scraping tests.ipynb" afterPath="$PROJECT_DIR$/Scripts/scraping/scraping tests.ipynb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/scraping_steps.txt" afterPath="$PROJECT_DIR$/Scripts/scraping/scraping_steps.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/tests.py" afterPath="$PROJECT_DIR$/Scripts/process json/tests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/use_to_font.py" afterPath="$PROJECT_DIR$/Scripts/process json/use_to_font.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/uses_urls.json" afterPath="$PROJECT_DIR$/Scripts/data/uses_urls.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/d3.v3.min.js" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/d3.v3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/imports.json" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/imports.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/imports_test.json" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/imports_test.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/index.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/index2.html" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/readme-flare-imports.json" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/readme-flare-imports.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/readme.md" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hierarchical_edge/thumbnail.png" afterPath="$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/thumbnail.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForceGraph/index_straight.html" afterPath="$PROJECT_DIR$/ForceGraph/index_straight.html" />
     </list>
     <ignored path="font_pairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,28 +887,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_config.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForceGraph/index_config.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="299" column="76" selection-start-line="299" selection-start-column="62" selection-end-line="299" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_config_black.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForceGraph/index_config_black.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="215" column="76" selection-start-line="215" selection-start-column="76" selection-end-line="215" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="graph_reducer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/graph_reducer.py">
+        <entry file="file://$PROJECT_DIR$/Scripts/process json/graph_reducer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
@@ -83,7 +897,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scripts/process json/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -93,8 +917,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mollies_viz.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/mollies_viz.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3000">
+              <caret line="200" column="35" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index_straight.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForceGraph/index_straight.html">
+        <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index_straight.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
               <caret line="132" column="29" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
@@ -104,7 +958,7 @@
         </entry>
       </file>
       <file leaf-file-name="index_sphere.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ForceGraph/index_sphere.html">
+        <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index_sphere.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="539">
               <caret line="307" column="7" selection-start-line="307" selection-start-column="7" selection-end-line="307" selection-end-column="7" />
@@ -149,6 +1003,7 @@
         <option value="$PROJECT_DIR$/ForceGraph/index_config_black.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ForceGraph/index_straight.html" />
+        <option value="$PROJECT_DIR$/Scripts/augment_font_dict.py" />
       </list>
     </option>
   </component>
@@ -234,6 +1089,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font_pairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font_pairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ForceGraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -247,6 +1120,13 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Scripts/process json" />
+      <recent name="$PROJECT_DIR$/Scripts" />
+      <recent name="$PROJECT_DIR$/ForceGraph/proccess pngs" />
+      <recent name="$PROJECT_DIR$/ForceGraph/graph examples" />
+      <recent name="$PROJECT_DIR$/ForceGraph/Fonts folders" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ForceGraph" />
     </key>
@@ -334,18 +1214,18 @@
       <workItem from="1472598763038" duration="221000" />
       <workItem from="1472599561084" duration="426000" />
       <workItem from="1472613901844" duration="564000" />
-      <workItem from="1472656391254" duration="1206000" />
+      <workItem from="1472656391254" duration="2171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43090000" />
+    <option name="totallyTimeSpent" value="44055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -382,63 +1262,63 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_scrape_fonts.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/fiu_scrape_fonts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/tests.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/process json/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/index.html">
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_use_list.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/fiu_use_list.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="8452" selection-start-line="5" selection-start-column="8452" selection-end-line="5" selection-end-column="8452" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_scrape_fonts.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/fiu_scrape_fonts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/collect_use_urls.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/collect_use_urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_scrape_fonts.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/fiu_scrape_fonts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/uses_urls.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/uses_urls.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hierarchical_edge/index.html">
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -447,7 +1327,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fiu_scrape.py" />
     <entry file="file://$PROJECT_DIR$/fiu_scrape.py" />
-    <entry file="file://$PROJECT_DIR$/hierarchical_edge/index2.html">
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -459,35 +1339,28 @@
     <entry file="file://$PROJECT_DIR$/fiu_scrape.py" />
     <entry file="file://$PROJECT_DIR$/uses_urls.json" />
     <entry file="file://$PROJECT_DIR$/Scraping/fiu_scrape.py" />
-    <entry file="file://$PROJECT_DIR$/Scripts/scraping_steps.txt">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/scraping_steps.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hierarchical_edge/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/uses_urls.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/uses_urls.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/collect_use_urls.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/collect_use_urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_scrape_uses.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/fiu_scrape_uses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-882">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="3" />
@@ -495,65 +1368,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scraping/font_link_counts.json" />
-    <entry file="file://$PROJECT_DIR$/Scripts/augment_font_dict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_fonts_dict.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/fiu_fonts_dict.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1852">
           <caret line="0" column="30585" selection-start-line="0" selection-start-column="30576" selection-end-line="0" selection-end-column="30585" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_fonts_dict_augmented.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/fiu_fonts_dict_augmented.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71190">
           <caret line="0" column="602833" selection-start-line="0" selection-start-column="602833" selection-end-line="0" selection-end-column="602833" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/use_to_font.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ForceGraph/graph_links.json" />
     <entry file="file://$PROJECT_DIR$/ForceGraph/graph_nodes.json" />
-    <entry file="file://$PROJECT_DIR$/Scripts/graph_links.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/graph_links.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="33271" selection-start-line="0" selection-start-column="33265" selection-end-line="0" selection-end-column="33271" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/font_use_counts.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/font_use_counts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5025">
           <caret line="0" column="44394" selection-start-line="0" selection-start-column="44394" selection-end-line="0" selection-end-column="44394" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_scrape_fonts.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/scraping/fiu_scrape_fonts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
@@ -567,7 +1412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/graph_nodes.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/graph_nodes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="590242" selection-start-line="0" selection-start-column="590242" selection-end-line="0" selection-end-column="590242" />
@@ -581,14 +1426,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/revert_and_clean_pngs.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/proccess png/revert_and_clean_pngs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs_smart.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/proccess png/resize_and_crop_pngs_smart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
@@ -602,32 +1447,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/chart_mollie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="200" column="35" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/fiu_use_list.json">
+    <entry file="file://$PROJECT_DIR$/Scripts/data/fiu_use_list.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="599">
           <caret line="5" column="1407074" selection-start-line="5" selection-start-column="1407074" selection-end-line="5" selection-end-column="1407074" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/proccess png/resize_and_crop_pngs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/graph_reducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -664,7 +1494,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/index_straight.html">
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index_straight.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="132" column="29" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
@@ -672,7 +1502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceGraph/index_sphere.html">
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index_sphere.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="307" column="7" selection-start-line="307" selection-start-column="7" selection-end-line="307" selection-end-column="7" />
@@ -684,6 +1514,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/hierarchical_edge/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/mollies_viz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="200" column="35" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/process json/graph_reducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/process json/use_to_font.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/process json/augment_font_dict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForceGraph/Examples/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/process json/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding />
         </state>
       </provider>

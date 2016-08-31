@@ -16,7 +16,7 @@ import json
 # compare ordered list of fonts for links and nodes
 
 links_fonts = []
-with open('../ForceGraph/graph_links_2.json') as links_json:
+with open('../ForceGraph/graph_links_cleaned.json') as links_json:
     link_list = json.load(links_json)
 
 for link in link_list:
@@ -31,7 +31,7 @@ for link in link_list:
 
 links_fonts = sorted(links_fonts)
 
-with open('../ForceGraph/graph_nodes_2.json') as nodes_json:
+with open('../ForceGraph/graph_nodes_cleaned.json') as nodes_json:
     nodes_list = json.load(nodes_json)
 
 nodes_fonts = []

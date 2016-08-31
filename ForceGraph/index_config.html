@@ -261,10 +261,10 @@
             .force("charge", d3.forceManyBody())
             .force("center", d3.forceCenter(width / 2, height / 2));
 
-    d3.json("graph_links_min2.json", function(error, graph_links) {
+    d3.json("Data/graph_links_min2.json", function(error, graph_links) {
         if (error) throw error;
 
-        d3.json("graph_nodes_min2.json", function(error, graph_nodes) {
+        d3.json("Data/graph_nodes_min2.json", function(error, graph_nodes) {
 
             var links_on = true;
             var linksChanger = gui.add(config, "links").listen();
@@ -297,7 +297,7 @@
                     .data(graph_nodes)
                     .enter().append("image")
                     .attr("id", function(d) { return d.name; })
-                    .attr("xlink:href", function(d) { return "Fonts folders/originals_cleaned_scaled/"+d.image_url; })
+                    .attr("xlink:href", function(d) { return "Fonts/originals_cleaned_scaled/"+d.image_url; })
                     .attr("width", function(d) { return 10*Math.sqrt(d.uses); })
                     .attr("height", 50) // max-height
                     .attr("x", function(d) { return -(this.getBBox().width/2);})

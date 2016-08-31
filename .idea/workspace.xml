@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="968cf860-3fad-43a8-934c-dfd966f4d041" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_links_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ForceGraph/graph_nodes_2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/04b-19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/2011-01-GoudyModern-metal-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-azer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-baseet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-bukra.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-kaff.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-makina.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-massira.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/29lt-ua-neo-b.png" afterPath="" />
@@ -3065,12 +3057,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/zizou-slab.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/zocalo.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Scraping/font_pngs/zona-black.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForceGraph/index_config.html" afterPath="$PROJECT_DIR$/ForceGraph/index_config.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs.py" afterPath="$PROJECT_DIR$/ForceGraph/resize_and_crop_pngs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scraping/graph_reducer.py" afterPath="$PROJECT_DIR$/Scraping/graph_reducer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scraping/tests.py" afterPath="$PROJECT_DIR$/Scraping/tests.py" />
     </list>
     <ignored path="font_pairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -3093,8 +3080,8 @@
       <file leaf-file-name="index_config.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ForceGraph/index_config.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+            <state relative-caret-position="530">
+              <caret line="81" column="51" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -3341,18 +3328,18 @@
       <workItem from="1472598763038" duration="221000" />
       <workItem from="1472599561084" duration="426000" />
       <workItem from="1472613901844" duration="564000" />
-      <workItem from="1472656391254" duration="419000" />
+      <workItem from="1472656391254" duration="542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42303000" />
+    <option name="totallyTimeSpent" value="42426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3678,8 +3665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ForceGraph/index_config.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="530">
+          <caret line="81" column="51" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
           <folding />
         </state>
       </provider>

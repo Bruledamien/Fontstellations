@@ -7,5 +7,4 @@ Scripts/fonts_wrong_bckgrd/
 Scripts/font_pngs/
 ForceGraph/Examples/hierarchical_edge/.DS_Store
 /ForceGraph/.idea/
-/.ipynb_checkpoints/
-.idea/workspace.xml
+.idea/

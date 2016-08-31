@@ -213,7 +213,7 @@
                     .data(graph_nodes)
                     .enter().append("image")
                     .attr("id", function(d) { return d.name; })
-                    .attr("xlink:href", function(d) { return "font_test/"+d.image_url; })
+                    .attr("xlink:href", function(d) { return "Fonts folders/font_test/"+d.image_url; })
                     .attr("width", function(d) { return 10*Math.sqrt(d.uses); })
                     .attr("height", 50) // max-height
                     .attr("x", function(d) { return -(this.getBBox().width/2);})

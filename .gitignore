@@ -1,3 +1,18 @@
-ForceGraph/font_pngs/
+/.idea/
+.DS_Store
+ForceGraph/.DS_Store
+ForceGraph/Fonts folders/
+ForceGraph/graph_links_min0.json
+ForceGraph/graph_links_min1.json
+ForceGraph/graph_links_min2.json
+ForceGraph/graph_links_min3.json
+ForceGraph/graph_nodes_min0.json
+ForceGraph/graph_nodes_min1.json
+ForceGraph/graph_nodes_min2.json
+ForceGraph/graph_nodes_min3.json
+Scraping/.DS_Store
+Scraping/Typewolf/.DS_Store
+Scraping/font_pngs_original_all/
+Scraping/fonts_wrong_bckgrd/
 Scraping/font_pngs/
-
+hierarchical_edge/.DS_Store

@@ -10,5 +10,8 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/ForceGraph/index_tree_tst.html" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.11 (~/anaconda/bin/python)" project-jdk-type="Python SDK" />
 </project>

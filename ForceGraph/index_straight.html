@@ -130,12 +130,12 @@
 //            .size([width, height])
 //            .charge(-config["charge"]);
 
-    d3.json("graph_links_2.json", function(error, graph_links) {
+    d3.json("graph_links_min3.json", function(error, graph_links) {
 
         if (error) throw error;
 
 
-        d3.json("graph_nodes_2.json", function(error, graph_nodes) {
+        d3.json("graph_nodes_min3.json", function(error, graph_nodes) {
 
             var link = svg.append("g")
                     .attr("class", "links")

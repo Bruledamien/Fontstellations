@@ -7,42 +7,43 @@
         /*stroke-opacity: 0.6;*/
     }
 
-    .nodes circle {
-        stroke: #fff;
-        stroke-width: 1.5px;
-    }
+    /*.nodes circle {*/
+        /*stroke: #fff;*/
+        /*stroke-width: 1.5px;*/
+    /*}*/
 
     .nodes image {
         -webkit-filter: invert(1);
         filter: invert(1);
     }
-    #map1 {
-        width:960px;
-        height:100px; background:cyan;
-    }
-    #map2 {
-        width:960px;
-        height:100px; background:red;
-    }
+    /*#map1 {*/
+        /*width:960px;*/
+        /*height:100px; background:cyan;*/
+    /*}*/
+    /*#map2 {*/
+        /*width:960px;*/
+        /*height:100px; background:red;*/
+    /*}*/
 </style>
 
 
-<div class="ui-widget">
-    <input id="search">
-    <button type="button" onclick="searchNode()">Search</button>
-</div>
 
 <!--<div id='map1'></div>-->
 <!--<div id='map2'></div>-->
-<svg id="viz"></svg>
-
-
+<body id="container" style="overflow: hidden">
+    <div id="searchbar" class="ui-widget">
+        <input id="search">
+        <button type="button" onclick="searchNode()">Search</button>
+    </div>
+    <svg id="viz"></svg>
+</body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type='text/javascript' src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"> </script>
-<script type='text/javascript' src="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> </script>
+<link rel="stylesheet" type="text/css" href="jquery-ui-edited.css">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 <script>
 
@@ -101,6 +102,8 @@
             g = d.getElementsByTagName('body')[0],
             width = w.innerWidth || e.clientWidth || g.clientWidth,
             height = w.innerHeight|| e.clientHeight|| g.clientHeight;
+            height= height; // weird fix for problem in Chrome
+
 
     var svg = d3.select("svg")
             .attr("width", width)

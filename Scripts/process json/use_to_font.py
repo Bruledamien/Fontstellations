@@ -2,17 +2,19 @@
 from collections import Counter
 import json
 
+# counts how many times a given link existed in uses, independently of order of two nodes
 def create_link_counts():
 
     with open('fiu_use_list.json') as json_list:
         use_list = json.load(json_list)
 
-    single_link_list = [] # contains all links (a,b) with repetition, and to identify link precisely tuple is 'ordered'
+    single_link_list = []  # contains all links (a,b) with repetition, and to identify link precisely tuple is 'ordered'
 
     for use in use_list:
         ordered_typefaces = sorted(use['typefaces'])
-        for i in range(1,len(ordered_typefaces)): # nothing if only one font in this use
-            single_link_list.append((ordered_typefaces[0],ordered_typefaces[i])) # fonts are ordered in tuple : always (a,b) and never (b,a)
+        for i in range(1, len(ordered_typefaces)):  # nothing if only one font in this use
+            # fonts are ordered in tuple : always (a,b) and never (b,a)
+            single_link_list.append((ordered_typefaces[0], ordered_typefaces[i]))
 
     counter_links = Counter(single_link_list)
     print "Total of " + str(len(counter_links.keys())) + " links in graph"
@@ -20,7 +22,7 @@ def create_link_counts():
     # convert Counter for export and d3 format
     graph_links = []
     for key in sorted(counter_links.keys()):
-        graph_links.append({"source":key[0], "target": key[1], "value": counter_links[key]})
+        graph_links.append({"source": key[0], "target": key[1], "value": counter_links[key]})
 
     with open('graph_links.json', 'w') as outfile:
         json.dump(graph_links, outfile)

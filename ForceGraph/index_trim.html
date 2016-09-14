@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
-    .links line {
-        stroke: #999;
-        /*stroke-opacity: 0.6;*/
-    }
-
 </style>
 
 
@@ -30,12 +24,14 @@
     // -------- CONFIGURATION CONTROLLERS ----------
     var config = {
         "velocityDecay": .8,
-        "linkStrength": 0.8,
-        "linkDistance": 600,
+        "linkStrength": 1,
+        "linkDistance": 30,
         "charge": 150,
         "gravity": .1,
-        "collision": 0,
-        "links": true
+        "collision": 3,
+        "display links": true,
+        "solo uses in %": true,
+        "node scaling":true
     };
     var gui = new dat.GUI();
 
@@ -54,8 +50,8 @@
     });
     var linkStrengthChanger = fl.add(config, "linkStrength", 0, 1);
     linkStrengthChanger.onChange(function(value){
-        var strength = function (link) {
-            return value / Math.min(count[link.source.index], count[link.target.index]);
+        var strength = function (d) {
+            return value * d.value / Math.min(d.source.uses, d.target.uses);
         };
         simulation.force("link", d3.forceLink().strength(strength));
         simulation.alphaTarget(0.1).restart()
@@ -78,12 +74,23 @@
         simulation.alphaTarget(0.4).restart()
     });
 
+    var phiChanger = gui.add(config, "solo uses in %").listen();
+    phiChanger.onChange(function () {
+        // the value is used to chose which phi tu use
+        simulation.restart()
+    });
+
+
+    //    var thresholdChanger = fl.add(config, "threshold", 0, 1);
+//    thresholdChanger.onChange(function (value) {
+//
+//        simulation.alphaTarget(0.4).restart()
+//    });
+
 
     // ------ Global variables -----------
-    var default_link_opacity = 0.9;
     // color groups
     //var color = d3.scaleOrdinal(d3.schemeCategory20);
-
 
     // set SVG width, height to window size
     var w = window,
@@ -105,7 +112,6 @@
         backgrd.attr("width", width).attr("height", height);
     }
     window.onresize = updateWindow;
-
 
     // create a background to intercept events
     // (responds to mouse, even when transparent)
@@ -139,21 +145,6 @@
 
     //------------------------ CLICK STUFF ----------------------
 
-    // Copied from M. Bostock's d3 V3, since this function disappeared from V4.
-    // https://groups.google.com/forum/#!topic/d3-js/86_jy82NNSY
-    d3.rebind = function (target, source) {
-        var i = 1, n = arguments.length, method;
-        while (++i < n) target[method = arguments[i]] = d3_rebind(target, source, source[method]);
-        return target;
-    };
-    function d3_rebind(target, source, method) {
-        return function () {
-            var value = method.apply(source, arguments);
-            return value === source ? target : value;
-        };
-    }
-
-
     function center_node(d, zoomon) {
         // Moves clicked node to center ; if zoomon true, will also zoom to on node to make it readable
 
@@ -178,27 +169,91 @@
 
         fadeOtherLinks(d.name);
 //        console.log("center trsfrm", d3.zoomTransform(viz));
+
+        // DISPLAY STATS INFO -- TO BE MOVED
+        console.log(d.name, "STATS");
+        var co_uses = 0;
+
+        var node_out_links = simulation.force("link").links()
+                .filter( function(p) {return p.source == d} );
+        for (var i=0; i < node_out_links.length; i++) {
+            co_uses += node_out_links[i].value;
+            console.log("is linked to: ", node_out_links[i].target.name, "with value: ", node_out_links[i].value);
+        }
+        var node_in_links = simulation.force("link").links()
+                .filter( function(p) {return p.target == d} );
+        for (var i=0; i < node_in_links.length; i++) {
+            co_uses += node_in_links[i].value;
+            console.log("is linked to: ", node_in_links[i].source.name, "with value: ", node_in_links[i].value);
+        }
+        console.log(d.name, " total usage: ", d.uses);
+        console.log(d.name, " co-usage: ", co_uses);
+        console.log(d.name, " solo-usage: ", d.uses-co_uses)
     }
 
-    function strenghten_links_to_node(d) {
+//    function strenghten_links_to_node(d) {
+//
+//        var dcx = (width / 2 - d.x * scale);
+//        var dcy = (height / 2 - d.y * scale);
+//
+//        // effectively do the transform
+//        g.transition()
+//                .duration(2000)
+//                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
+//
+//        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
+//        d3.select(viz).transition().duration(2000)
+//                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
+//
+//        fadeOtherLinks(d.name);
+//    }
 
-        var dcx = (width / 2 - d.x * scale);
-        var dcy = (height / 2 - d.y * scale);
 
-        // effectively do the transform
-        g.transition()
-                .duration(2000)
-                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
-
-        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
-        d3.select(viz).transition().duration(2000)
-                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
-
-        fadeOtherLinks(d.name);
+    function get_co_uses(node){
+        var node_links = simulation.force("link").links()
+                .filter( function(p) {return p.source == node || p.target == node} );
+        var co_uses = 0;
+        for (var i=0; i < node_links.length; i++) {
+            co_uses += node_links[i].value ;
+        }
+        return co_uses
     }
 
+    function node_scale(uses) {
+        if (config["node scaling"] == true) {
+            return 10 + 10 * Math.sqrt(uses);
+        }else{
+            return 10 + uses;
+        }
+    }
+
+    function phi(d) {
+
+        if (config['solo uses in %'] == true) {
+            // create a link_weight in [0,1] (highest percentage of co-usage among source or target of link)
+            var link_weight = d.value / Math.min(d.source.uses, d.target.uses);
+            // scale the weight to [0,10] and change scale with a x^2 function
+
+        } else {
+            var link_weight = d.value / Math.min(get_co_uses(d.source), get_co_uses(d.target));
+            link_weight /= 2;
+        }
+        return 10 * Math.pow(link_weight, 2);
+    }
+
+//    if (d.source.name == 'Bello' && count < 30){  phi2(d), count++, console.log(link_weight) ; }
 
 
+    var default_link_opacity = function (d) {
+        var alpha =  (phi(d) > 0.6) ? 0.9 : 0;
+        return  alpha;
+    };
+
+    var default_link_color = function (d) {
+        var psi =  (phi(d) > 0.5) ? (10 - phi(d)) : 20;
+        psi = Math.floor(psi);
+        return "#"+(psi).toString(16)+(psi).toString(16)+(psi).toString(16);
+    };
 
     /////////---------------- FORCE SIMULATION -----------------
 
@@ -206,13 +261,21 @@
     var simulation = d3.forceSimulation()
             .velocityDecay(config.velocityDecay)
             .force("link", d3.forceLink()
-                    .distance(config.linkDistance)
-                    .id(function (d) { return d.name;})) // suspicious ?
+                    .distance(60)
+                    .strength(function (d) {
+                        return phi(d);
+                    })
+                    .id(function (d) { return d.name;}))
             .force("charge", d3.forceManyBody().strength(-config.charge))
             .force("center", d3.forceCenter(width / 2, height / 2))
             .force("collide", d3.forceCollide().radius(function (d) {
                 return config.collision*Math.sqrt(d.uses);
             }).iterations(2));
+
+    setTimeout(function(){
+            simulation.force("link").distance(config.linkDistance);
+    }, 2000);
+
 
     console.log(-config.charge);
 
@@ -222,11 +285,24 @@
         d3.json("Data/absolute link value/graph_nodes_min3.json", function (error, graph_nodes) {
 
             var links_on = true;
-            var linksChanger = gui.add(config, "links").listen();
+            var linksChanger = gui.add(config, "display links").listen();
             linksChanger.onChange(function (value) {
                 links_on = value;
                 simulation.restart()
             });
+
+            var nodeChanger = gui.add(config, "node scaling").listen();
+            nodeChanger.onChange(function () {
+                g.selectAll("image")
+                        .attr("width", function (d) { return node_scale(d.uses); })
+                        .attr("x", function (d) {
+                            return -(this.getBBox().width / 2);
+                        })
+                        .attr("y", function (d) {
+                            return -(this.getBBox().height / 2);
+                        });
+            });
+
 
             var link = g.append("g")
                     .attr("class", "links")
@@ -234,18 +310,7 @@
                     .data(graph_links)
                     .enter().append("line")
 
-//            var node = g.append("g")
-//                    .attr("class", "nodes")
-//                    .selectAll("circle")
-//                    .data(graph_nodes)
-//                    .enter().append("circle")
-//                    .attr("r", function(d) { return Math.sqrt(2*d.uses); })
-//                    .attr("fill", function(d) { return color(d.group); })
-//                    .call(d3.drag()
-//                    .on("start", dragstarted)
-//                    .on("drag", dragged)
-//                    .on("end", dragended));
-
+            var count = 0;
             var node2 = g.append("g")
                     .attr("class", "nodes")
                     .selectAll("image")
@@ -258,7 +323,7 @@
                         return "Fonts/originals_cleaned_scaled/" + d.image_url;
                     })
                     .attr("width", function (d) {
-                        return 10 * Math.sqrt(d.uses);
+                        return node_scale(d.uses);
                     })
                     .attr("height", 50) // max-height
                     .attr("x", function (d) {
@@ -274,24 +339,13 @@
                         d3.select(this).style("cursor", "")
                     })
                     .on("click", function (d) {
+                        console.log("node clicked!", count);
                         center_node(d, false)
+                        count +=1;
                     });
 
 
-//    .on("click", function(d) {
-//            var cc = clickcancel();
-//            d3.select("#" + d.name).call(cc)
-//            d3.select('#map').text(d3.select('#map').text() + 'click, ')
-//            center_node(d, false)})
-
-
             // -------- SIMULATION -------
-
-//            // drag feature
-//            node2.call(d3.drag()
-//                            .on("start", dragstarted)
-//                            .on("drag", dragged)
-//                            .on("end", dragended));
 
             node2.append("title")
                     .text(function (d) {
@@ -320,8 +374,9 @@
                             return d.target.y;
                         })
                         .attr("stroke-opacity", links_on ? default_link_opacity : 0)
+                        .attr("stroke", default_link_color)
                         .attr("stroke-width", function (d) {
-                            return 1.5 * (d.value - 0.9);
+                            return phi(d);
                         }); // originally Math.sqrt(d.value);
 
                 node2
@@ -347,22 +402,7 @@
         });
     });
 
-    function dragstarted(d) {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-        d.fx = d.x;
-        d.fy = d.y;
-    }
-
-    function dragged(d) {
-        d.fx = d3.event.x;
-        d.fy = d3.event.y;
-    }
-
-    function dragended(d) {
-        if (!d3.event.active) simulation.alphaTarget(0);
-        d.fx = null;
-        d.fy = null;
-    }
+    // --------- More functions --------
 
     function searchNode() {
         //find the node
@@ -376,54 +416,30 @@
             var selected = node.filter(function (d) {
                 return d.name == selectedVal;
             });
-
             center_node(selected.datum(), true);
             fadeOtherLinks(selectedVal);
-            // CAREFUL SELECTED IS ALL BUT SEARCHED... so change to "not selected"
-//            selected.style("opacity", "0");
-//            var link = svg.selectAll("line")
-//            link.style("opacity", "0");
-//            d3.selectAll("image, line").transition()
-//                    .duration(5000)
-//                    .style("opacity", 1);
-
         }
     }
 
     //select all links NOT related to the font name and fade
     function fadeOtherLinks(name) {
-        var fade_links = svg.selectAll('line').filter(function (d) {
+        var fade_links = g.selectAll("line").filter(function (d) {
             return name !== d.source.name && name !== d.target.name;
         });
 
-        svg.selectAll('line').transition().duration(1000).style('opacity', default_link_opacity);
+        svg.selectAll("line").transition().duration(1000).style('opacity', default_link_opacity);
         last_link_selection = fade_links;
         fade_links.transition().duration(1000).style('opacity', 0);
     }
 
-
-    var last_link_selection = svg.selectAll('line'); // initialized full
-
-
-    //    var cc = clickcancel();
-    //    d3.selectAll('image').call(cc);
-    //    d3.select('#map1').call(cc);
-    //    d3.select('#map2').call(cc);
-    //
-    //    cc.on('click', function() {
-    //        d3.select('#map1').text(d3.select('#map1').text() + 'click, ');
-    //    });
-    //
-    //    cc.on('dblclick', function() {
-    //        d3.select('#map2').text(d3.select('#map2').text() + 'dblclick, ');
-    //    });
+    var last_link_selection = g.selectAll("line"); // initialized full
+    console.log(last_link_selection);
 
     function unclick() {
-
+        console.log("unclick")
         last_link_selection
                 .transition().duration(1000)
                 .style("opacity", last_link_selection.style("opacity") == default_link_opacity ? 0 : default_link_opacity);
-        console.log(last_link_selection.style("opacity") == default_link_opacity ? 0 : default_link_opacity);
     }
 
 

@@ -4,12 +4,33 @@
 </style>
 
 
-<body id="container" style="overflow: hidden">
-<div id="searchbar" class="ui-widget">
-    <input id="search">
-    <button type="button" onclick="searchNode()">Search</button>
-</div>
-<svg id="viz"></svg>
+<body id="body" style="overflow: hidden">
+    <div id="mySidenav" class="sidenav">
+        <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</div>
+
+        <div id="navsearch">
+            <div id="searchbar" class="ui-widget">
+                <input id="search" onkeydown = "if (event.keyCode == 13)
+                    document.getElementById('searchBtn').click()">
+                <button id="searchBtn" type="button" type="submit" onclick="searchNode()">Search</button>
+            </div>
+        </div>
+        <div id="navtitle" class="navmenu"> Select a font </div>
+        <div id="navcontent">
+            <div id="navchart">
+                <svg id="piechart"></svg>
+            </div>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+        <svg id="viz"></svg>
+    </div>
 </body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -17,9 +38,59 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type='text/javascript' src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="jquery-ui-edited.css">
+<link rel="stylesheet" type="text/css" href="sidenav.css">
 <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 <script>
+
+    width = document.querySelector("#piechart").clientWidth
+    height = document.querySelector("#piechart").clientHeight
+    radius = Math.min(width, height) / 2;
+
+    var piechart = d3.select("#piechart").append("g")
+            .attr("width", width)
+            .attr("height", height);
+
+    piechart.append("g").attr("class", "slices");
+    piechart.append("g").attr("class", "labels");
+    piechart.append("g").attr("class", "lines");
+
+    var pie = d3.pie()
+            .sortValues(null) // or compare
+            .value(function(d) { return d.value; });
+
+    function compare(a, b) {
+        return b - a;
+    }
+
+    var arc = d3.arc()
+            .outerRadius(radius * 0.8)
+            .innerRadius(0)
+            .padAngle(0)
+            .cornerRadius(0);
+
+    var outerArc = d3.arc()
+            .innerRadius(radius * 0.9)
+            .outerRadius(radius * 0.9);
+
+    piechart.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    console.log("piechart init");
+
+    //drawChart([{'name':'none', 'value':1}]);
+
+    // -------- SIDE BAR DISPLAY  ------------------
+
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "350px";
+        document.getElementById("main").style.marginLeft = "350px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+
 
     // -------- CONFIGURATION CONTROLLERS ----------
     var config = {
@@ -30,8 +101,7 @@
         "gravity": .1,
         "collision": 0,
         "display links": true,
-        "solo uses in %": true,
-        "node scaling":false
+        "node scaling":true
     };
     var gui = new dat.GUI();
 
@@ -48,14 +118,14 @@
         simulation.force("link").distance(value);
         simulation.alphaTarget(0.1).restart()
     });
-//    var linkStrengthChanger = fl.add(config, "linkStrength", 0, 1);
-//    linkStrengthChanger.onChange(function(value){
-//        var strength = function (d) {
-//            return value * d.value / Math.min(d.source.uses, d.target.uses);
-//        };
-//        simulation.force("link", d3.forceLink().strength(strength));
-//        simulation.alphaTarget(0.1).restart()
-//    });
+    //    var linkStrengthChanger = fl.add(config, "linkStrength", 0, 1);
+    //    linkStrengthChanger.onChange(function(value){
+    //        var strength = function (d) {
+    //            return value * d.value / Math.min(d.source.uses, d.target.uses);
+    //        };
+    //        simulation.force("link", d3.forceLink().strength(strength));
+    //        simulation.alphaTarget(0.1).restart()
+    //    });
     var chargeChanger = fl.add(config, "charge", 10, 300);
     chargeChanger.onChange(function (value) {
         simulation.force("charge").strength(-value);
@@ -74,18 +144,12 @@
         simulation.alphaTarget(0.4).restart()
     });
 
-    var phiChanger = gui.add(config, "solo uses in %").listen();
-    phiChanger.onChange(function () {
-        // the value is used to chose which phi tu use
-        simulation.restart()
-    });
-
 
     //    var thresholdChanger = fl.add(config, "threshold", 0, 1);
-//    thresholdChanger.onChange(function (value) {
-//
-//        simulation.alphaTarget(0.4).restart()
-//    });
+    //    thresholdChanger.onChange(function (value) {
+    //
+    //        simulation.alphaTarget(0.4).restart()
+    //    });
 
 
     // ------ Global variables -----------
@@ -100,7 +164,7 @@
             width = w.innerWidth || e.clientWidth || g.clientWidth,
             height = w.innerHeight || e.clientHeight || g.clientHeight;
 
-    var svg = d3.select("svg")
+    var svg = d3.select("#viz")
             .attr("width", width)
             .attr("height", height);
 
@@ -118,13 +182,14 @@
     var backgrd = svg.append("rect")
             .attr("width", width)
             .attr("height", height)
-            .style("fill", "white")
+            .style("fill", "grey")
             .style("opacity", 0.2)
             .style("pointer-events", "all")
             .on("click", unclick);
 
     var g = svg.append("g")
-            .attr("class", "container");
+            .attr("class", "container")
+            .on("click", console.log("container clicked"));
 
     /////// ----------------------- FUNCTIONS ----------------
 
@@ -147,17 +212,14 @@
 
     function center_node(d, zoomon) {
         // Moves clicked node to center ; if zoomon true, will also zoom to on node to make it readable
-
         if (zoomon) {
-            var scale = 3; // change to adapt to font box size !
+            var scale = 1; // change to adapt to font box size !
         } else {
             var scale = d3.zoomTransform(viz).k;
         }
 
         var dcx = (width / 2 - d.x * scale);
         var dcy = (height / 2 - d.y * scale);
-
-
         // effectively do the transform
         g.transition()
                 .duration(2000)
@@ -169,58 +231,198 @@
 
         fadeOtherLinks(d.name);
 //        console.log("center trsfrm", d3.zoomTransform(viz));
+        display_font_info(d)
+    }
 
+    function display_font_info(d){
 
+        //Display selected font name
+        $("#navtitle").html(d.name);
 
+        //compute stats
         var co_uses = 0;
-
+        var data = [];
         var node_out_links = simulation.force("link").links()
                 .filter( function(p) {return p.source == d} );
         for (var i=0; i < node_out_links.length; i++) {
             co_uses += node_out_links[i].value;
-            console.log("is linked to: ", node_out_links[i].target.name, "with value: ", node_out_links[i].value);
+            data.push({'name': node_out_links[i].target.name, 'value': node_out_links[i].value});
+            //console.log("is linked to: ", node_out_links[i].target.name, "with value: ", node_out_links[i].value);
         }
         var node_in_links = simulation.force("link").links()
                 .filter( function(p) {return p.target == d} );
         for (var i=0; i < node_in_links.length; i++) {
             co_uses += node_in_links[i].value;
-            console.log("is linked to: ", node_in_links[i].source.name, "with value: ", node_in_links[i].value);
+            data.push({'name': node_in_links[i].source.name, 'value': node_in_links[i].value});
+            //console.log("is linked to: ", node_in_links[i].source.name, "with value: ", node_in_links[i].value);
         }
 
-//        // DISPLAY STATS INFO -- TO BE MOVED
+        data.sort(function(a,b) {
+                    var diff = b.value - a.value;
+                    if (diff == 0){
+                        return a.name - b.name;// does not work
+                    } else {
+                        return diff
+                    }
+                });
+        console.log(data);
+
+        //drawList(data)
+
+        if (data.length > 10){
+            console.log('splice', data.length);
+//            var remaining_value = 0
+//            for (i=11;i<data.length;i++){
+//                remaining_value += data[i].value;
+//            }
+//            data.splice(10, data.length-10, {'name':'...', 'value':remaing_value});
+
+            data.splice(10);
+            console.log("spliced d",data)
+        }
+
+        //drawChart(data);
+
+        // DISPLAY STATS INFO -- TO BE MOVED
 //        console.log(d.name, "STATS");
 //        console.log(d.name, " total usage: ", d.uses);
 //        console.log(d.name, " co-usage: ", co_uses);
 //        console.log(d.name, " solo-usage: ", d.uses-co_uses)
+
     }
 
-//    function strenghten_links_to_node(d) {
-//
-//        var dcx = (width / 2 - d.x * scale);
-//        var dcy = (height / 2 - d.y * scale);
-//
-//        // effectively do the transform
-//        g.transition()
-//                .duration(2000)
-//                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
-//
-//        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
-//        d3.select(viz).transition().duration(2000)
-//                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
-//
-//        fadeOtherLinks(d.name);
-//    }
+    function drawChart(data) {
+        console.log('draw');
+
+        var key = function(d){ return d.data.name};
+
+        /* ------- PIE SLICES -------*/
+        var slice = piechart.select(".slices").selectAll("path.slice")
+                .data(pie(data), key);
+
+        slice.enter()
+                .insert("path")
+                .attr("class", "slice")
+                .style("fill", function(d) { return d3.interpolateViridis(Math.random()) })
+                .attr("d", arc)
+                .each(function(d) { this._current = d; }); // store the initial angles
+
+        slice
+                .transition().duration(1000)
+                .attrTween("d", function(d) {
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        return arc(interpolate(t));
+                    };
+                });
+
+        slice.exit()
+                .remove();
+
+        /* ------- TEXT LABELS -------*/
 
 
-    function get_co_uses(node){
-        var node_links = simulation.force("link").links()
-                .filter( function(p) {return p.source == node || p.target == node} );
-        var co_uses = 0;
-        for (var i=0; i < node_links.length; i++) {
-            co_uses += node_links[i].value ;
+        var text = piechart.select(".labels").selectAll("text")
+                .data(pie(data), key);
+
+        text.enter()
+                .append("text")
+                .attr("dy", ".35em")
+                .text(function(d) {
+                    return d.index+1; //d.data.name;
+                })
+                .attr("transform", function(d) {
+                    var pos = outerArc.centroid(d);
+                    pos[0] = radius * (midAngle(d) < Math.PI ? 1 : -1);
+                    return "translate("+ pos +")";
+                })
+                .attr("text-anchor", function(d){
+                    return midAngle(d) < Math.PI ? "start":"end"
+                })
+                .each(function(d) { this._current = d; });
+
+        function midAngle(d){
+            return d.startAngle + (d.endAngle - d.startAngle)/2;
         }
-        return co_uses
+
+        text.transition().duration(1000)
+                .attrTween("transform", function(d) {
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        var d2 = interpolate(t);
+                        var pos = outerArc.centroid(d2);
+                        pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
+                        return "translate("+ pos +")";
+                    };
+                })
+                .styleTween("text-anchor", function(d){
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        var d2 = interpolate(t);
+                        return midAngle(d2) < Math.PI ? "start":"end";
+                    };
+                });
+
+        text.exit()
+                .remove();
+
+        /* ------- SLICE TO TEXT POLYLINES -------*/
+
+        var polyline = piechart.select(".lines").selectAll("polyline")
+                .data(pie(data), key);
+
+        polyline.enter()
+                .append("polyline")
+                .attr("points", function(d) {
+                        var pos = outerArc.centroid(d);
+                        pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                        return [arc.centroid(d), outerArc.centroid(d), pos];
+                    })
+                .each(function(d) { this._current = d; });
+
+        polyline.transition().duration(1000)
+                .attrTween("points", function(d){
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        var d2 = interpolate(t);
+                        var pos = outerArc.centroid(d2);
+                        pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+                        return [arc.centroid(d2), outerArc.centroid(d2), pos];
+                    };
+                });
+
+        polyline.exit()
+                .remove();
+
     }
+
+
+
+    //    function strenghten_links_to_node(d) {
+    //
+    //        var dcx = (width / 2 - d.x * scale);
+    //        var dcy = (height / 2 - d.y * scale);
+    //
+    //        // effectively do the transform
+    //        g.transition()
+    //                .duration(2000)
+    //                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
+    //
+    //        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
+    //        d3.select(viz).transition().duration(2000)
+    //                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
+    //
+    //        fadeOtherLinks(d.name);
+    //    }
+
 
     function node_scale(uses) {
         if (config["node scaling"] == true) {
@@ -231,36 +433,32 @@
     }
 
     function phi(d) {
-
-        if (config['solo uses in %'] == true) {
-            // create a link_weight in [0,1] (highest percentage of co-usage among source or target of link)
-            var link_weight = d.value / Math.min(d.source.uses, d.target.uses);
-            // scale the weight to [0,10] and change scale with a x^2 function
-
-        } else {
-            var link_weight = d.value / Math.min(get_co_uses(d.source), get_co_uses(d.target));
-            link_weight /= 2;
-        }
+        // create a link_weight in [0,1] (highest percentage of co-usage among source or target of link)
+        var link_weight = d.value / Math.min(d.source.uses, d.target.uses);
+        // scale the weight to [0,10] and change scale with a x^2 function
         return 10 * Math.pow(link_weight, 2);
     }
 
-//    if (d.source.name == 'Bello' && count < 30){  phi2(d), count++, console.log(link_weight) ; }
+    //    if (d.source.name == 'Bello' && count < 30){  phi2(d), count++, console.log(link_weight) ; }
 
-        function phi2(d){
-            // try d.value > 1 or 2 instead
-            // remove de /d.value
-        var beta = (phi(d) > 0.6) ? phi(d)/d.value : 0.001 ;
+
+    var phi_threshold = 0.6;
+    var low_opacity = 0.2;
+
+    function phi2(d){
+        // try d.value > 1 or 2 instead
+        // remove the /d.value
+        var beta = (phi(d) > phi_threshold) ? phi(d)/d.value : 0.001 ;
         return beta;
     }
 
-
     var default_link_opacity = function (d) {
-        var alpha =  (phi(d) > 0.6) ? 0.9 : 0;
+        var alpha =  (phi(d) > phi_threshold) ? 0.9 : 0;
         return  alpha;
     };
 
     var default_link_color = function (d) {
-        var psi =  (phi(d) > 0.5) ? (10 - phi(d)) : 20;
+        var psi =  (phi(d) > phi_threshold) ? (10 - phi(d)) : 20;
         psi = Math.floor(psi);
         return "#"+(psi).toString(16)+(psi).toString(16)+(psi).toString(16);
     };
@@ -283,7 +481,7 @@
             }).iterations(2));
 
     setTimeout(function(){
-            simulation.force("link").distance(config.linkDistance);
+        simulation.force("link").distance(config.linkDistance);
     }, 2000);
 
 
@@ -292,7 +490,7 @@
     d3.json("Data/absolute link value/graph_links_min3.json", function (error, graph_links) {
         if (error) throw error;
 
-        d3.json("Data/absolute link value/graph_nodes_min3.json", function (error, graph_nodes) {
+        d3.json("Data/saved_nodes.json", function (error, graph_nodes) {
 
             var links_on = true;
             var linksChanger = gui.add(config, "display links").listen();
@@ -355,14 +553,13 @@
                     });
 
 
-
             // -------- SIMULATION -------
 
             // drag feature
-//            node2.call(d3.drag()
-//                            .on("start", dragstarted)
-//                            .on("drag", dragged)
-//                            .on("end", dragended));
+            node2.call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
 
             node2.append("title")
                     .text(function (d) {
@@ -373,10 +570,8 @@
                     .nodes(graph_nodes)
                     .on("tick", ticked)
                     .on("end", function(){
-                        console.log("simulation", simulation.nodes());
-                        console.save(simulation.nodes(), "saved_nodes.json")
+                        console.log("end of simulation");
                     });
-
 
             simulation.force("link")
                     .links(graph_links);
@@ -396,7 +591,7 @@
                         .attr("y2", function (d) {
                             return d.target.y;
                         })
-                        .attr("stroke-opacity", links_on ? default_link_opacity : 0)
+                        .attr("stroke-opacity", links_on ? default_link_opacity : low_opacity)
                         .attr("stroke", default_link_color)
                         .attr("stroke-width", function (d) {
                             return phi(d);
@@ -407,7 +602,6 @@
                             return "translate(" + d.x + "," + d.y + ")";
                         }); // for the image
             }
-
 
             // --------- Autocomplete search bar (needs access to data) --------
             var optArray = [];
@@ -465,7 +659,7 @@
     var last_link_selection = g.selectAll("line"); // initialized full
     var last_link_opacity_status = 1; // default
 
-    console.log('initialization', last_link_selection);
+    //console.log('initialization', last_link_selection);
 
     //select all links NOT related to the font name and fade
     function fadeOtherLinks(name) {
@@ -474,7 +668,7 @@
         });
 
         // set all links to default opacity (reset old selections)
-        svg.selectAll("line").transition().duration(1000).style('opacity', default_link_opacity);
+        svg.selectAll("line").transition().duration(1000).style('opacity', default_link_opacity).style("stroke","red");
         last_link_selection = fade_links;
         last_link_opacity_status = 0;
 
@@ -482,7 +676,7 @@
         console.log('fadeOtherLinks status', last_link_opacity_status);
 
         // fade out the correct links
-        fade_links.transition().duration(1000).style('opacity', 0);
+        fade_links.transition().duration(1000).style('opacity', low_opacity).style("stroke", default_link_color);
     }
 
 
@@ -493,15 +687,14 @@
         try {
             last_link_selection
                     .transition().duration(1000)
-                    .style("opacity", last_link_opacity_status == 1 ? 0 : default_link_opacity);
+                    .style("opacity", last_link_opacity_status == 1 ? low_opacity : default_link_opacity)
+//                    .style("stroke", last_link_opacity_status == 1 ? default_link_color : "red");
 
-            last_link_opacity_status = (last_link_opacity_status == 1 ? 0 : 1)
+            last_link_opacity_status = (last_link_opacity_status == 1 ? 0 : 1);
             console.log("toggling link selection")
         }
         catch(err) {
             console.log("last_link_selection not initialized ; please click on node");
         }
     }
-
-
 </script>

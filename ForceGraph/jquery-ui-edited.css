@@ -10,17 +10,6 @@ input, button:focus {
     outline: none;
 }
 
-#body {
-    position: relative;
-    margin: 0 0 0 0;
-    padding: 0;
-}
-
-#searchbar {
-    margin: 5px 5px 5px 5px;
-    display: block;
-}
-
 .ui-front {
     z-index: 100;
 }
@@ -33,13 +22,6 @@ input, button:focus {
     overflow: auto;
     max-height: calc(100% - 1.1em - 17px);
     margin: 0 0 0 0;
-}
-
-#search {
-    /*padding: 2px 5px 2px 5px;*/
-    padding: 0 0 0 0;
-    padding: 1px 1px 2px 5px;
-    background-color: #cccccc;
 }
 
 .ui-menu {

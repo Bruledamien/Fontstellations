@@ -33,19 +33,19 @@ html {
     position : absolute;
     /*margin: 5px 5px 5px 5px;*/
     display: block;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 10px;
 }
 
 #statzone{
-    /*background-color: rgba(200, 200, 200, 0.95);*/
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(200, 200, 200, 0.95);
+    /*background-color: rgba(0, 0, 0, 0.95);*/
     /*border: solid 1px purple;*/
     width: 287px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 60px);
     position : absolute;
-    top: calc(5px + 27px + 3px);
-    left: 5px;
+    top: calc(10px + 27px + 10px);
+    left: 10px;
 
 }
 
@@ -73,15 +73,15 @@ html {
 
 #navtitle{
     width:100%;
-    /*margin-top: 10px;*/
-    padding: 20px;
+    margin-top: 10px;
+    padding: 5px;
 }
 
 #statzone a {
     /*padding: 8px 8px 8px 32px;*/
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: black;
     display: block;
     transition: 0.3s
 }
@@ -98,7 +98,7 @@ html {
 
 #navchart{
     width:100%;
-    height: calc(100% - 80px);
+    height: calc(100% - 40px - 10px);
     position: absolute;
     /*border: solid 0.5px red;*/
     /*background-color: #cccccc;*/
@@ -106,12 +106,12 @@ html {
 }
 
 #barchart rect{
-    fill: #303030;
-    /*opacity: 0.8;*/
+    fill: white;
+    opacity: 0.8;
 }
 
 #barchart text{
-    fill: white;
+    fill: blackR;
 }
 
 /*#barchart div {*/

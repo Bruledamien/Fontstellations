@@ -100,6 +100,7 @@
         "charge": 100,
         "gravity": .1,
         "collision": 0,
+        "threshold": 0.20,
         "display links": true,
         "node scaling":true
     };
@@ -143,13 +144,6 @@
         }).iterations(2));
         simulation.alphaTarget(0.4).restart()
     });
-
-
-    //    var thresholdChanger = fl.add(config, "threshold", 0, 1);
-    //    thresholdChanger.onChange(function (value) {
-    //
-    //        simulation.alphaTarget(0.4).restart()
-    //    });
 
 
     // ------ Global variables -----------
@@ -427,7 +421,7 @@
     function node_scale(uses) {
         if (config["node scaling"] == true) {
             return 10 + 10 * Math.sqrt(uses);
-        }else{
+        } else {
             return 10 + uses;
         }
     }
@@ -445,15 +439,19 @@
     var phi_threshold = 0.6;
     var low_opacity = 0.2;
 
-    function phi2(d){
+    function link_strength(d){
         // try d.value > 1 or 2 instead
-        // remove the /d.value
-        var beta = (phi(d) > phi_threshold) ? phi(d)/d.value : 0.001 ;
+        var beta = (phi(d) > phi_threshold) ? phi(d)/d.value : 0.001 ; //d.value prevents from exploding
         return beta;
     }
 
+    function stroke_width(d){
+        return phi(d) > phi_threshold ? phi(d) : 0.1;
+    }
+
+
     var default_link_opacity = function (d) {
-        var alpha =  (phi(d) > phi_threshold) ? 0.9 : 0;
+        var alpha =  (phi(d) > phi_threshold) ? 0.9 : 0.5;
         return  alpha;
     };
 
@@ -471,7 +469,7 @@
             .force("link", d3.forceLink()
                     .distance(60)
                     .strength(function (d) {
-                        return phi2(d);
+                        return link_strength(d);
                     })
                     .id(function (d) { return d.name;}))
             .force("charge", d3.forceManyBody().strength(-config.charge))
@@ -480,12 +478,9 @@
                 return config.collision*Math.sqrt(d.uses);
             }).iterations(2));
 
-    setTimeout(function(){
-        simulation.force("link").distance(config.linkDistance);
-    }, 2000);
-
-
-    console.log("-config.charge",-config.charge);
+//    setTimeout(function(){
+//        simulation.force("link").distance(config.linkDistance);
+//    }, 2000);
 
     d3.json("Data/absolute link value/graph_links_min3.json", function (error, graph_links) {
         if (error) throw error;
@@ -593,15 +588,22 @@
                         })
                         .attr("stroke-opacity", links_on ? default_link_opacity : low_opacity)
                         .attr("stroke", default_link_color)
-                        .attr("stroke-width", function (d) {
-                            return phi(d);
-                        }); // originally Math.sqrt(d.value);
+                        .attr("stroke-width", stroke_width); // originally Math.sqrt(d.value);
 
                 node2
                         .attr("transform", function (d) {
                             return "translate(" + d.x + "," + d.y + ")";
                         }); // for the image
             }
+
+
+            var phiChanger = gui.add(config, "threshold", 0, 0.5).listen();
+            phiChanger.onChange(function () {
+                console.log(config.threshold); // does not change the value of phi though...
+                phi_threshold = 1 + config.threshold
+                simulation.force("link").strength(link_strength)
+                simulation.alphaTarget(0.2).restart()
+            });
 
             // --------- Autocomplete search bar (needs access to data) --------
             var optArray = [];
@@ -672,8 +674,8 @@
         last_link_selection = fade_links;
         last_link_opacity_status = 0;
 
-        console.log('fadeOtherLinks', last_link_selection);
-        console.log('fadeOtherLinks status', last_link_opacity_status);
+//        console.log('fadeOtherLinks', last_link_selection);
+//        console.log('fadeOtherLinks status', last_link_opacity_status);
 
         // fade out the correct links
         fade_links.transition().duration(1000).style('opacity', low_opacity).style("stroke", default_link_color);

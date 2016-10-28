@@ -17,12 +17,15 @@
                         document.getElementById('searchBtn').click()">
                 <button id="searchBtn" type="button" type="submit" onclick="searchNode()">Search</button>
             </div>
-            <div id="statzone">
+            <div id="statzone" class="hide">
+                <div id="close"><a>x</a></div>
                 <div id="navtitle" class="navmenu"><a>Select a font</a></div>
+                <div id="navuses"></div>
+                <div id="navpairings"></div>
+                <div id="navconnexions"></div>
+
                 <div id="navchart">
-                    <div class="piediv">
-                        <svg id="piechart"></svg>
-                    </div>
+                    <svg id="baraxis"></svg>
                    <div class="bardiv">
                        <svg id="barchart"></svg>
                    </div>
@@ -45,58 +48,10 @@
 <script>
 
 //    width = document.querySelector("#piechart").clientWidth
-    height = document.querySelector("#piechart").clientHeight
+//    height = document.querySelector("#piechart").clientHeight
     width = 287;
-    radius = Math.min(width, height) / 2;
 
-    var piechart = d3.select("#piechart").append("g")
-            .attr("width", width)
-            .attr("height", height);
-
-    piechart.append("g").attr("class", "slices");
-    piechart.append("g").attr("class", "labels");
-    piechart.append("g").attr("class", "lines");
-
-    var pie = d3.pie()
-            .sortValues(null) // or compare. Note : data is sorted beforehand
-            .value(function(d) { return d.value; });
-
-    function compare(a, b) {
-        return b - a;
-    }
-
-    var arc = d3.arc()
-            .outerRadius(radius * 0.8)
-            .innerRadius(0)
-            .padAngle(0)
-            .cornerRadius(0);
-
-    var outerArc = d3.arc()
-            .innerRadius(radius * 0.9)
-            .outerRadius(radius * 0.9);
-
-    piechart.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-    console.log("piechart init");
-
-    //drawChart([{'name':'none', 'value':1}]);
-
-
-    // -------- SIDE BAR DISPLAY  ------------------
-
-
-
-//    function openNav() {
-//        document.getElementById("mySidenav").style.width = "350px";
-//        document.getElementById("main").style.marginLeft = "350px";
-//    }
-//
-//    openNav();
-//
-//    function closeNav() {
-//        document.getElementById("mySidenav").style.width = "0";
-//        document.getElementById("main").style.marginLeft= "0";
-//    }
-
+    d3.select("#close").on("click",function() {d3.select("#statzone").attr("class", "hide")}) ;
 
     // -------- CONFIGURATION CONTROLLERS ----------
     var config = {
@@ -210,6 +165,10 @@
     //------------------------ CLICK STUFF ----------------------
 
     function center_node(d, zoomon) {
+
+        // Open panel
+        d3.select("#statzone").attr("class", "show");
+
         // Moves clicked node to center ; if zoomon true, will also zoom to on node to make it readable
 
         if (zoomon) {
@@ -238,10 +197,11 @@
 
     function display_font_info(d){
 
-
-        var title = `${d.name} (${d.uses} uses)`
         //Display selected font name
-        $("#navtitle").html(`<a target='_blank' href='http://fontsinuse.com/search?terms=${d.name}'>${title}</a>`);
+        $("#navtitle").html(`<a>${d.name}</a>`); /* onclick="searchNode()" */
+        $("#navuses").html(`<a target='_blank' href='http://fontsinuse.com/search?terms=${d.name}'>${d.uses} uses</a>`);
+        $("#navpairings").html(`<a target='_blank' href='http://fontsinuse.com/search?terms=${d.name}'>${d.single_couses} pairings</a>`);
+
 
         //compute stats
         var co_uses = 0;
@@ -273,37 +233,28 @@
                     }
                 });
 
-        data[0]['label'] = data[0].value;
-        for (var i=1; i < data.length; i++){
-            if (data[i-1].value > data[i].value){
-                data[i]['label'] = data[i].value;
-            } else{
-                data[i]['label'] = "";
-            }
-        }
+        data.push({'name': '', 'value': 0});
 
-//        console.log(data);
-//        if (data.length > 10){
-//            console.log('splice', data.length);
-////            var remaining_value = 0
-////            for (i=11;i<data.length;i++){
-////                remaining_value += data[i].value;
-////            }
-////            data.splice(10, data.length-10, {'name':'...', 'value':remaing_value});
-//
-//            data.splice(10);
-//            console.log("spliced d",data)
-//        }
+        $("#navconnexions").html(`<a>${data.length-1} connected fonts</a>`);
 
-        drawChart(data);
         drawBars(data);
-
-        // DISPLAY STATS INFO -- TO BE MOVED
-//        console.log(d.name, "STATS");
-//        console.log(d.name, " total usage: ", d.uses);
-//        console.log(d.name, " co-usage: ", co_uses);
-//        console.log(d.name, " solo-usage: ", d.uses-co_uses)
     }
+
+
+var margin = 20;
+var bar_width = 30;
+var bar_height = width - 2 * margin;
+var x = d3.scaleLinear().range([0, bar_height]);
+x.domain([0, 8]);
+
+var baraxis = d3.select("#baraxis")
+        .attr("height", 30)
+        .attr("width", width); // same as piechart
+
+baraxis.append("g")
+        .attr("class", "axis top")
+        .attr("transform", "translate("+(margin+1)+", 22)")
+        .call(d3.axisTop(x))
 
     function drawBars(data) {
 
@@ -311,38 +262,47 @@
 //                d.sales = +d.sales;
 //            });
 
-        var margin = 20;
-        var bar_width = 30;
-        var bar_height = width - 2 * margin;
         // set the ranges
         var y = d3.scaleBand().range([0, (bar_width+5) * data.length],0.1).padding(0.1);
-        var x = d3.scaleLinear().range([0, bar_height]);
+
 
         // Scale the range of the data in the domains
         y.domain(data.map(function(d) { return d.name; }));
-        x.domain([0, d3.max(data, function(d) { return d.value; })]);
+//        x.domain([0, d3.max(data, function(d) { return d.value; })]);
 
+        var xAxis = d3.axisBottom(x)
+                .tickSize((bar_width) * data.length);
 
         var bar_margin = 0; //3
-        var top_margin = 10;
+        var top_margin = 0;
         var barchart = d3.select("#barchart")
                 .attr("height", (bar_width) * data.length + top_margin)
                 .attr("width", width); // same as piechart
 
-        console.log("width", width);
+        barchart.selectAll(".axis").remove();
+
+        barchart.append("g")
+                .attr("class", "axis bottom")
+                .attr("transform", "translate("+margin+","+top_margin+ ")")
+                .call(xAxis);
+
+
+        d3.select("#gbars").remove()
         // append the rectangles for the bar chart
-
-
-        var gbar = barchart.selectAll("g").data(data)
+        var gbar = barchart.append("g")
+                .attr("id", "gbars")
+                .selectAll(".gbar").data(data)
 
         var enter = gbar.enter().append("g")
                         .attr("transform", function(d, i) { return "translate("+margin+","+ (i * bar_width + top_margin) + ")"; })
+                        .attr("class", "gbar")
                 .merge(gbar)
 
         gbar.exit().remove();
-        gbar.selectAll("rect").remove();
-        gbar.selectAll("text").remove();
-        gbar.selectAll("line").remove();
+//        gbar.selectAll("rect").remove();
+//        gbar.selectAll("text").remove();
+//        gbar.selectAll("line").remove();
+
 
         enter.append("rect")
                 .attr("class", "bar")
@@ -360,171 +320,15 @@
 //                    return `<a href="#">${d.name}</a>` ;
                 })
 
-        enter.append("text")
-                .attr("class", "value-label")
-                .attr("x", function (d) {
-                    return x(d.value);
-                })
-                .attr("dx", "-0.75em")
-                .attr("y", 0)
-                .attr("dy", ".35em")
-                .text(function (d) {
-                    return d.label
-                });
-
-        enter.append("line")
-                .style("stroke", "black")
-                .style("stroke-width", function(d) {
-                    if (d.label != ''){
-                        return 2
-                    }else {
-                        return 0;
-                    }
-                })
-                .attr("x1", function(d) { return x(d.value); })
-                .attr("x2", function(d) { return x(d.value); })
-                .attr("y1", -7)
-                .attr("y2", 13);
     }
 
-    function drawChart(data) {
-        console.log('draw');
-
-        var key = function(d){ return d.data.name};
-
-        /* ------- PIE SLICES -------*/
-        var slice = piechart.select(".slices").selectAll("path.slice")
-                .data(pie(data), key);
-
-        slice.enter()
-                .insert("path")
-                .attr("class", "slice")
-                .style("fill", function(d) { return d3.interpolateGreys(Math.random()) })
-                .attr("d", arc)
-                .each(function(d) { this._current = d; }); // store the initial angles
-
-        slice
-                .transition().duration(1000)
-                .attrTween("d", function(d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function(t) {
-                        return arc(interpolate(t));
-                    };
-                });
-
-        slice.exit()
-                .remove();
-
-//        /* ------- TEXT LABELS -------*/
-//
-//
-//        var text = piechart.select(".labels").selectAll("text")
-//                .data(pie(data), key);
-//
-//        text.enter()
-//                .append("text")
-//                .attr("dy", ".35em")
-//                .text(function(d) {
-//                    return d.index+1; //d.data.name;
-//                })
-//                .attr("transform", function(d) {
-//                    var pos = outerArc.centroid(d);
-//                    pos[0] = radius * (midAngle(d) < Math.PI ? 1 : -1);
-//                    return "translate("+ pos +")";
-//                })
-//                .attr("text-anchor", function(d){
-//                    return midAngle(d) < Math.PI ? "start":"end"
-//                })
-//                .each(function(d) { this._current = d; });
-//
-//        function midAngle(d){
-//            return d.startAngle + (d.endAngle - d.startAngle)/2;
-//        }
-//
-//        text.transition().duration(1000)
-//                .attrTween("transform", function(d) {
-//                    this._current = this._current || d;
-//                    var interpolate = d3.interpolate(this._current, d);
-//                    this._current = interpolate(0);
-//                    return function(t) {
-//                        var d2 = interpolate(t);
-//                        var pos = outerArc.centroid(d2);
-//                        pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
-//                        return "translate("+ pos +")";
-//                    };
-//                })
-//                .styleTween("text-anchor", function(d){
-//                    this._current = this._current || d;
-//                    var interpolate = d3.interpolate(this._current, d);
-//                    this._current = interpolate(0);
-//                    return function(t) {
-//                        var d2 = interpolate(t);
-//                        return midAngle(d2) < Math.PI ? "start":"end";
-//                    };
-//                });
-//
-//        text.exit()
-//                .remove();
-//
-//        /* ------- SLICE TO TEXT POLYLINES -------*/
-//
-//        var polyline = piechart.select(".lines").selectAll("polyline")
-//                .data(pie(data), key);
-//
-//        polyline.enter()
-//                .append("polyline")
-//                .attr("points", function(d) {
-//                        var pos = outerArc.centroid(d);
-//                        pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
-//                        return [arc.centroid(d), outerArc.centroid(d), pos];
-//                    })
-//                .each(function(d) { this._current = d; });
-//
-//        polyline.transition().duration(1000)
-//                .attrTween("points", function(d){
-//                    this._current = this._current || d;
-//                    var interpolate = d3.interpolate(this._current, d);
-//                    this._current = interpolate(0);
-//                    return function(t) {
-//                        var d2 = interpolate(t);
-//                        var pos = outerArc.centroid(d2);
-//                        pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-//                        return [arc.centroid(d2), outerArc.centroid(d2), pos];
-//                    };
-//                });
-//
-//        polyline.exit()
-//                .remove();
-
-    }
-
-
-
-    //    function strenghten_links_to_node(d) {
-    //
-    //        var dcx = (width / 2 - d.x * scale);
-    //        var dcy = (height / 2 - d.y * scale);
-    //
-    //        // effectively do the transform
-    //        g.transition()
-    //                .duration(2000)
-    //                .attr("transform", "translate(" + dcx + "," + dcy + ")scale(" + scale + ")");
-    //
-    //        // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
-    //        d3.select(viz).transition().duration(2000)
-    //                .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
-    //
-    //        fadeOtherLinks(d.name);
-    //    }
 
 
     function node_scale(uses) {
-        if (config["node scaling"] == true) {
-            return 10 + 10 * Math.sqrt(uses);
-        } else {
+        if (config["node scaling"] == false) {
             return 10 + uses;
+        } else {
+            return 10 + 10 * Math.sqrt(uses);
         }
     }
 
@@ -541,7 +345,7 @@
     var phi_threshold = 1 + config.threshold;
 //    console.log("phi_t", phi_threshold);
 
-    var low_opacity = 0.2;
+    var low_opacity = 0.3;
 
     function link_strength(d){
         // try d.value > 1 or 2 instead
@@ -578,7 +382,7 @@
                     })
                     .id(function (d) { return d.name;}))
             .force("charge", d3.forceManyBody().strength(-config.charge))
-            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("center", d3.forceCenter(full_width / 2, full_height / 2))
             .force("collide", d3.forceCollide().radius(function (d) {
                 return config.collision*Math.sqrt(d.uses);
             }).iterations(2));
@@ -591,19 +395,6 @@
         if (error) throw error;
 
         d3.json("Data/absolute link value/graph_nodes_min9.json", function (error, graph_nodes) {
-
-//            var nodeChanger = gui.add(config, "node scaling").listen();
-//            nodeChanger.onChange(function () {
-//                g.selectAll("image")
-//                        .attr("width", function (d) { return node_scale(d.uses); })
-//                        .attr("x", function (d) {
-//                            return -(this.getBBox().width / 2);
-//                        })
-//                        .attr("y", function (d) {
-//                            return -(this.getBBox().height / 2);
-//                        });
-//            });
-
 
             var link = g.append("g")
                     .attr("class", "links")
@@ -749,6 +540,7 @@
     }
 
     function searchNode() {
+
         //find the node
         var selectedVal = document.getElementById('search').value;
         var node = svg.selectAll("image");
@@ -775,14 +567,15 @@
         var fade_links = g.selectAll("line").filter(function (d) {
             return name !== d.source.name && name !== d.target.name;
         });
+        console.log('hello, fading');
 
         // set all links to default opacity (reset old selections)
-        svg.selectAll("line").transition().duration(1000).style('opacity', default_link_opacity).style("stroke","red");
+        //svg.selectAll("line").transition().duration(1000).style('opacity', default_link_opacity).style("stroke","red");
         last_link_selection = fade_links;
         last_link_opacity_status = 0;
 
         // fade out the correct links
-        fade_links.transition().duration(1000).style('opacity', low_opacity).style("stroke", default_link_color);
+        //fade_links.transition().duration(1000).style('opacity', low_opacity).style("stroke", default_link_color);
     }
 
 //

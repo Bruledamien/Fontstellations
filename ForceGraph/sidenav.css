@@ -10,6 +10,22 @@ html {
     box-sizing: inherit;
 }
 
+.hide{
+    display: none;
+}
+
+#viz rect, line{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+#viz rect:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
 
 #body {
     position: relative;
@@ -29,6 +45,10 @@ html {
     background-color: #cccccc;
 }
 
+#searchBtn:hover{
+    cursor: pointer;
+}
+
 #searchbar {
     position : absolute;
     /*margin: 5px 5px 5px 5px;*/
@@ -39,13 +59,14 @@ html {
 
 #statzone{
     /*background-color: rgba(200, 200, 200, 0.95);*/
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.85);
     /*border: solid 1px purple;*/
     width: 287px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 120px);
     position : absolute;
-    top: calc(5px + 27px + 3px);
-    left: 5px;
+    top: calc(5px + 27px + 50px);
+    /*left: 5px;*/
+    left: 35px;
 
 }
 
@@ -71,23 +92,46 @@ html {
     height: 37px;
 }
 
+
 #navtitle{
+    font-size: 25px;
+    padding-top: 15px
+}
+#navtitle, #navuses, #navpairings, #navconnexions{
     width:100%;
     /*margin-top: 10px;*/
-    padding: 20px;
+    padding-left: 20px;
 }
+#navconnexions{
+    padding-bottom: 15px;
+}
+
 
 #statzone a {
     /*padding: 8px 8px 8px 32px;*/
     text-decoration: none;
-    font-size: 25px;
     color: white;
     display: block;
     transition: 0.3s
 }
 
+#close a{
+    color: #cccccc;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10px;
+    background-color: #303030;
+    box-sizing: content-box;
+    height: 10px;
+    width: 10px;
+    padding: 5px;
+    float: right;
+}
+
+
 #statzone a:hover, .offcanvas a:focus{
     color: #2fa1d6;
+    cursor: pointer;
 }
 
 .bardiv{
@@ -106,11 +150,12 @@ html {
 }
 
 #barchart rect{
-    fill: #303030;
+    /*fill: #303030;*/
+    fill: #707070;
     /*opacity: 0.8;*/
 }
 
-#barchart text{
+#barchart, #baraxis text{
     fill: white;
 }
 
@@ -122,6 +167,25 @@ html {
     /*margin: 1px;*/
     /*color: white;*/
 /*}*/
+
+
+.axis.bottom line {
+    stroke: white;
+    /*stroke: #303030;*/
+    stroke-width: 0.5px;
+    stroke-dasharray: 4, 4;
+}
+.axis.bottom path {
+    display: none;
+}
+
+.axis.top line, .axis.top path {
+    /*stroke: white;*/
+    /*stroke: #303030;*/
+    stroke: #cccccc;
+    stroke-width: 2px;
+}
+
 
 polyline{
     opacity: 1;

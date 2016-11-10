@@ -66,7 +66,7 @@
     // -------- CONFIGURATION CONTROLLERS ----------
 
     var config = {
-        "Speed": .2,
+        "Intertia": .8,
 //        "linkDistance": 100,
         "Repulsion": 100,
         "Threshold": 0.11
@@ -76,7 +76,7 @@
     var fl = gui.addFolder('Simulation Controls');
     fl.open()
 
-    var velocityDecayChanger = fl.add(config, "Speed", 0, 1);
+    var velocityDecayChanger = fl.add(config, "Intertia", 0, 1);
     velocityDecayChanger.onChange(function (value) {
         simulation.velocityDecay(1-value);
         simulation.restart()
@@ -370,7 +370,7 @@ baraxis.append("g")
 
         var standout = 0;
         if (d3.select(this).classed("active")){
-            standout = 0.2;
+            standout = 0.7;
         }
 
         return phi(d) > phi_threshold ? phi(d) + standout : 0.1 + standout;
@@ -392,7 +392,7 @@ baraxis.append("g")
     /////////---------------- FORCE SIMULATION -----------------
 
     var simulation = d3.forceSimulation()
-            .velocityDecay(1-config["Speed"])
+            .velocityDecay(config["Intertia"])
             .force("link", d3.forceLink()
                     .distance(80)
                     .strength(function (d) {
@@ -481,11 +481,11 @@ baraxis.append("g")
 
             var counter = 0;
 
-            var update_speed = function() {
+            var update_Intertia = function() {
 
-//                requestAnimationFrame(update_speed);
-                config.Speed += 0.02;
-                simulation.velocityDecay(1-config.Speed);
+//                requestAnimationFrame(update_Intertia);
+                config.Intertia -= 0.02;
+                simulation.velocityDecay(config.Intertia);
                 simulation.restart()
                 fl.__controllers[0].updateDisplay();
 
@@ -518,9 +518,9 @@ baraxis.append("g")
                 counter += 1;
 
                 if (counter < 31) {
-                    update_speed();
+                    update_Intertia();
                 }
-//                console.log(config.Speed);
+//                console.log(config.Intertia);
             }
 
             phiChanger.onChange(function () {

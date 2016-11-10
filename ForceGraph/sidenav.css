@@ -38,6 +38,15 @@ html {
     position : relative;
 }
 
+#graph-stats{
+    position : absolute;
+    right: 30px;
+    top: calc(100vh - 25px);
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff,
+    0 0 80px #fff;
+}
+
 #search {
     /*padding: 2px 5px 2px 5px;*/
     padding: 0 0 0 0;
@@ -53,21 +62,23 @@ html {
     position : absolute;
     /*margin: 5px 5px 5px 5px;*/
     display: block;
-    top: 5px;
-    left: 5px;
+    top: 30px;
+    left: 30px;
 }
 
 #statzone{
     /*background-color: rgba(200, 200, 200, 0.95);*/
+    /*display: inline-block;*/
     background-color: rgba(0, 0, 0, 0.85);
     /*border: solid 1px purple;*/
     width: 287px;
-    height: calc(100vh - 120px);
+    min-height: 170px;
+    max-height: calc(100vh - 120px);
     position : absolute;
     top: calc(5px + 27px + 50px);
     /*left: 5px;*/
-    left: 35px;
-
+    left: 30px;
+    padding-bottom: 20px;
 }
 
 .sidenav {
@@ -93,26 +104,59 @@ html {
 }
 
 
-#navtitle{
-    font-size: 25px;
-    padding-top: 15px
-}
+
 #navtitle, #navuses, #navpairings, #navconnexions{
     width:100%;
     /*margin-top: 10px;*/
     padding-left: 20px;
 }
-#navconnexions{
-    padding-bottom: 15px;
+
+
+.accordion{
+    transition: 0.4s;
 }
 
+.panel {
+    font-family: 'Lato', sans-serif;
+    width:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    /*font-style: normal;*/
+    font-weight: 300;
+    color: white;
 
-#statzone a {
+    display: none;
+
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+div.panel.show {
+    display: block;
+}
+
+#statzone a{
     /*padding: 8px 8px 8px 32px;*/
     text-decoration: none;
-    color: white;
+    color: #cccccc;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+}
+
+#navtitle a{
+    font-size: 25px;
+    padding-top: 15px;
+    color: #fff;
+    /*color: #bc731a;*/
+}
+
+a#fiulink {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
 }
 
 #close a{
@@ -135,15 +179,16 @@ html {
 }
 
 .bardiv{
-    position: absolute;
-    height: calc(100% - 155px - 10px); /*10px margin*/
+    /*position: absolute;*/
+    max-height: calc(100vh - 400px);
+    /*max-height: 365px; !*10px margin*!*/
     overflow:auto;
 }
 
 #navchart{
+    padding-top: 15px;
     width:100%;
-    height: calc(100% - 80px);
-    position: absolute;
+    /*position: absolute;*/
     /*border: solid 0.5px red;*/
     /*background-color: #cccccc;*/
     /*overflow:auto;*/
@@ -152,6 +197,10 @@ html {
 #barchart rect{
     /*fill: #303030;*/
     fill: #707070;
+    fill: #9d6015;
+    fill: #7F6339;
+    /*fill: #e39535;*/
+    /*fill: #a4520e;*/
     /*opacity: 0.8;*/
 }
 
@@ -214,4 +263,27 @@ polyline{
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+
+/*line.inactive.faded {*/
+    /*stroke: #3c3c3c;*/
+/*}*/
+
+line.inactive{
+    stroke: #707070;
+    transition: all 1s ease;
+}
+
+line.active{
+    /*stroke: #7142f4;*/
+    /*stroke: #8f42f4;*/
+    /*stroke: #2fa1d6;*/
+    /*stroke: #42f4ce;*/
+    /*stroke: #5be5b7;*/
+    /*stroke: #1abcaf;*/
+    /*stroke: #891abc;*/
+    /*stroke: #661abc;*/
+    /*stroke: #cecdbe;*/
+    stroke: #bc731a;
 }

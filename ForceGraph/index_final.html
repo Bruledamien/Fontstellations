@@ -20,9 +20,21 @@
 <body id="body" style="overflow: hidden">
 
     <div id="main">
+        <div id="backdrop-div">
+            <div class="h1">Fontstellations</div>
+            <div class="h2">a co-usage font graph with 458 fonts and 1807 links</div>
+            <div id="col-1">
+                <p><span>Click to select a font, or use the search bar to display info.</span><img class="icon pointer" src="pointer.png"></p>
+                <p><span>Pan & Zoom to explore.</span><img class="icon move" src="move.png"></p>
+                <p><span>Use the Controls to change the graph.</span><img class="icon slide" src="slide.png"></p>
 
-        <div class="backdrop-div">
-
+            </div>
+            <div id="col-2">
+                <p><img class="icon size" src="size.png"><span>The size of a font is determined by the total number of uses.</span></p>
+                <p><img class="icon weight" src="weight.png"><span>The weight of a link depends on the co-usage of two fonts.</span></p>
+                <p><img class="icon filter" src="filter.png"><span>Below a threshold, weak links are discarded from the graph.</span></p>
+            </div>
+            <div id="close" class="hideshow">✕</div>
         </div>
 
         <div class="overlaid-div">
@@ -32,8 +44,8 @@
                 <button id="searchBtn" type="button" type="submit" onclick="searchNode()">Search</button>
             </div>
             <div id="statzone" class="hide">
-                <div id="close"><a>x</a></div>
-                <div id="navtitle" class="navmenu"><a>Select a font</a></div>
+                <div id="close2">✕</div>
+                <div id="navtitle" class="navmenu"></div>
                 <div id="navuses" class="accordion"></div>
                 <div class="panel">
                     Number of uses collected from <a id="fiulink" target='_blank' href='http://fontsinuse.com/'>fontsinuse.com</a> as
@@ -56,9 +68,7 @@
                 </div>
             </div>
 
-            <div id="graph-stats"></div>
-
-            <div id="info"><a>i</a></div>
+            <div id="info" class="hideshow">i</div>
         </div>
         <svg id="viz"></svg>
     </div>
@@ -66,29 +76,36 @@
 
 <script>
 
+    $(document).ready(function(){
+        $('.hideshow').on('click', function(event) {
+            $('#backdrop-div').toggle();
+            $('#searchbar').toggle();
+//            $('#statzone').toggle();
+            $('#gui').toggle();
+        });
+    });
+
     // -------- CONFIGURATION CONTROLLERS ----------
 
     var config = {
-        "Intertia": .8,
+        "Inertia": .8,
 //        "linkDistance": 100,
         "Repulsion": 100,
         "Threshold": 0.11
     };
 
-    var gui = new dat.GUI();
+
+    var gui = new dat.GUI( );
+    gui.domElement.id = 'gui';
+
     var fl = gui.addFolder('Simulation Controls');
     fl.open()
 
-    var velocityDecayChanger = fl.add(config, "Intertia", 0, 1);
+    var velocityDecayChanger = fl.add(config, "Inertia", 0, 1);
     velocityDecayChanger.onChange(function (value) {
-        simulation.velocityDecay(1-value);
+        simulation.velocityDecay(value);
         simulation.restart()
     });
-//    var linkDistanceChanger = fl.add(config, "linkDistance", 0, 1000);
-//    linkDistanceChanger.onChange(function (value) {
-//        simulation.force("link").distance(value);
-//        simulation.alphaTarget(0.1).restart()
-//    });
 
     var chargeChanger = fl.add(config, "Repulsion", 10, 300);
     chargeChanger.onChange(function (value) {
@@ -125,8 +142,8 @@
     var backgrd = svg.append("rect")
             .attr("width", full_width)
             .attr("height", full_height)
-            .style("fill", "white")
-            .style("opacity", 0.2)
+            .style("fill", "red")
+            .style("opacity", 0.0)
             .style("pointer-events", "all")
 //            .on("click", unclick);
 
@@ -151,7 +168,7 @@
 
     //------------------------ CLICK STUFF ----------------------
 
-    d3.select("#close").on("click",function() {d3.select("#statzone").attr("class", "hide")}) ;
+    d3.select("#close2").on("click",function() {d3.select("#statzone").attr("class", "hide")}) ;
 
     var acc = document.getElementsByClassName("accordion");
     var panel = document.getElementsByClassName('panel');
@@ -202,10 +219,6 @@
 
         fadeOtherLinks(d.name);
         display_font_info(d)
-    }
-
-    function display_graph_stats(nnodes, nlinks){
-        $("#graph-stats").html(`<a>Viewing ${nnodes} nodes and ${nlinks} links</a>`);
     }
 
     function display_font_info(d){
@@ -360,8 +373,6 @@ baraxis.append("g")
     var phi_threshold = 1 + config.Threshold;
 //    console.log("phi_t", phi_threshold);
 
-    var low_opacity = 0.3;
-
     function link_strength(d){
         // try d.value > 1 or 2 instead
         var beta = (phi(d) > phi_threshold) ? phi(d) : 0.001 ;
@@ -373,7 +384,7 @@ baraxis.append("g")
 
         var standout = 0;
         if (d3.select(this).classed("active")){
-            standout = 0.7;
+            standout = 0.2;
         }
 
         return phi(d) > phi_threshold ? phi(d) + standout : 0.1 + standout;
@@ -381,7 +392,13 @@ baraxis.append("g")
 
 
     var default_link_opacity = function (d) {
-        var alpha =  (phi(d) > phi_threshold) ? 0.95 : 0.5;
+
+        var standout = 0;
+        if (d3.select(this).classed("active")){
+            standout = 0.9;
+        }
+
+        var alpha =  (phi(d) > phi_threshold) ? 0.95 : 0.5 + standout;
 //        if (alpha == 0.5) {
 //            d3.select(this).classed("faded", true);
 //        } else {
@@ -395,7 +412,7 @@ baraxis.append("g")
     /////////---------------- FORCE SIMULATION -----------------
 
     var simulation = d3.forceSimulation()
-            .velocityDecay(config["Intertia"])
+            .velocityDecay(config["Inertia"])
             .force("link", d3.forceLink()
                     .distance(80)
                     .strength(function (d) {
@@ -412,9 +429,6 @@ baraxis.append("g")
         if (error) throw error;
 
         d3.json("Data/absolute link value/graph_nodes_min5.json", function (error, graph_nodes) {
-
-
-            display_graph_stats(graph_nodes.length, graph_links.length);
 
             var link = g.append("g")
                     .attr("class", "links")
@@ -484,11 +498,11 @@ baraxis.append("g")
 
             var counter = 0;
 
-            var update_Intertia = function() {
+            var update_Inertia = function() {
 
-//                requestAnimationFrame(update_Intertia);
-                config.Intertia -= 0.02;
-                simulation.velocityDecay(config.Intertia);
+//                requestAnimationFrame(update_Inertia);
+                config.Inertia -= 0.02;
+                simulation.velocityDecay(config.Inertia);
                 simulation.restart()
                 fl.__controllers[0].updateDisplay();
 
@@ -521,9 +535,9 @@ baraxis.append("g")
                 counter += 1;
 
                 if (counter < 31) {
-                    update_Intertia();
+                    update_Inertia();
                 }
-//                console.log(config.Intertia);
+//                console.log(config.Inertia);
             }
 
             phiChanger.onChange(function () {

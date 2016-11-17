@@ -127,7 +127,7 @@ P{
     font-size: 12px;
 }
 
-#footer a:visited {
+#footer a{
     color: #fff;
 }
 
@@ -323,7 +323,8 @@ a#fiulink {
     /*position: absolute;*/
     max-height: calc(100vh - 400px);
     /*max-height: 365px; !*10px margin*!*/
-    overflow:auto;
+    overflow-y:auto;
+    overflow-x: hidden;
 }
 
 #navchart{

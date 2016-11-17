@@ -65,7 +65,6 @@ input, button:focus {
     /*padding: 1.5px 1px 1.5px 1px ;*/
     margin-right: 0px;
     border: none;
-
 }
 
 .ui-widget button {
@@ -86,8 +85,10 @@ button:active {
 .ui-widget-content {
     /*border: 1px solid #aaaaaa;*/
     font-family: 'Slabo 27px', serif;
-    width: 229px;
-    background: rgba(255, 255, 255, 0.8);
+    width: 287px;
+    background: rgba(255, 255, 255, 1);
+    max-height: calc(100vh - 130px);;
+    overflow-y: auto;
 }
 
 .ui-helper-hidden-accessible {

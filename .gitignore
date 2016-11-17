@@ -1,6 +1,5 @@
 .DS_Store
 ForceGraph/.DS_Store
-ForceGraph/Fonts/
 Scripts/.DS_Store
 Scripts/Typewolf/.DS_Store
 Scripts/fonts_wrong_bckgrd/
@@ -8,3 +7,10 @@ Scripts/font_pngs/
 ForceGraph/Examples/hierarchical_edge/.DS_Store
 /ForceGraph/.idea/
 .idea/
+/ForceGraph/Fonts/font_pngs/
+/ForceGraph/Fonts/font_pngs_original_all/
+/ForceGraph/Fonts/font_pngs_test/
+/ForceGraph/Fonts/font_pngs_white/
+/ForceGraph/Fonts/font_solid_bkgrd_108/
+/ForceGraph/Fonts/font_test/
+/ForceGraph/Fonts/originals_cleaned/

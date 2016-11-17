@@ -118,6 +118,19 @@ P{
     padding-bottom: 4px;
 }
 
+#footer{
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+#footer a:visited {
+    color: #fff;
+}
+
 .overlaid-div{
     position : relative;
 }
@@ -372,7 +385,7 @@ polyline{
     transition: margin-left .5s;
     padding: 0;
     position: relative;
-    background-color: rgba(200,200,200,0.2);
+    /*background-color: rgba(200,200,200,0.2);*/
     /*background-color: #7905F2;*/
 }
 
@@ -401,14 +414,6 @@ line.active{
     stroke: var(--main-bg-color);
 }
 
-
-button:hover {
-    color: var(--main-hl-color);
-}
-
-button:active {
-    color: #cccccc;
-}
 
 #searchbar, #gui{
     display:none;

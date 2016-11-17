@@ -75,9 +75,12 @@ input, button:focus {
     background-color: black;
 }
 
+button:hover {
+    color: var(--main-hl-color);
+}
+
 button:active {
-    color: lightskyblue;
-    /*background-color: ;*/
+    color: #cccccc;
 }
 
 .ui-widget-content {

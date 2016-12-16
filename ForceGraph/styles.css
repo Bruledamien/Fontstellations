@@ -120,11 +120,11 @@ P{
 
 #footer{
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     text-align: center;
     left: 0;
     right: 0;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #footer a{

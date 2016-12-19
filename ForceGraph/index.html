@@ -92,7 +92,6 @@
 
     var config = {
         "Inertia": .8,
-//        "linkDistance": 100,
         "Repulsion": 100,
         "Threshold": 0.5
     };
@@ -504,7 +503,7 @@
             var update_Inertia = function() {
                 config.Inertia -= 0.02;
                 simulation.velocityDecay(config.Inertia);
-                simulation.restart()
+                simulation.restart();
                 fl.__controllers[0].updateDisplay();
             };
 

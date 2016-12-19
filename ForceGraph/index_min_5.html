@@ -94,7 +94,7 @@
         "Inertia": .8,
 //        "linkDistance": 100,
         "Repulsion": 100,
-        "Threshold": 0.5
+        "Threshold": 0.11
     };
 
 
@@ -116,7 +116,7 @@
         simulation.alphaTarget(0.4).restart()
     });
 
-    var phiChanger = fl.add(config, "Threshold", 0, 1).listen();
+    var phiChanger = fl.add(config, "Threshold", 0, 0.2).listen();
 
     // ------ Global variables -----------
     // set SVG width, height to window size
@@ -163,7 +163,7 @@
     }
 
     var zoom = d3.zoom()
-            .scaleExtent([0.3, 3])
+            .scaleExtent([0.2, 5])
             .on("zoom", zoomed);
     // look at zoom.extent and zoom.translateExtent
     svg.call(zoom); // why SVG and not g ?
@@ -370,10 +370,10 @@ baraxis.append("g")
         var link_weight = d.value / Math.min(d.source.single_couses, d.target.single_couses);
         // change scale with a x^2 function and scale the weight to [0,10]
         if (i<30){ i++; console.log("phi1");/*console.log(Math.pow(link_weight, 2))*/}
-        return 1 + 10 * Math.pow(link_weight, 2);
+        return 1 + 1 * Math.pow(link_weight, 2);
     }
 
-    var phi_threshold = 1 + config.Threshold / 2;
+    var phi_threshold = 1 + config.Threshold;
 //    console.log("phi_t", phi_threshold);
 
     function link_strength(d){
@@ -428,10 +428,10 @@ baraxis.append("g")
                 return config.collision*Math.sqrt(d.uses);
             }).iterations(2));
 
-    d3.json("Data/absolute link value/graph_links_min9.json", function (error, graph_links) {
+    d3.json("Data/absolute link value/graph_links_min5.json", function (error, graph_links) {
         if (error) throw error;
 
-        d3.json("Data/absolute link value/graph_nodes_min9.json", function (error, graph_nodes) {
+        d3.json("Data/absolute link value/graph_nodes_min5.json", function (error, graph_nodes) {
 
             var link = g.append("g")
                     .attr("class", "links")
@@ -545,7 +545,7 @@ baraxis.append("g")
 
             phiChanger.onChange(function () {
 //                console.log(config.Threshold); // does not change the value of phi though...
-                phi_threshold = 1 + config.Threshold / 2;
+                phi_threshold = 1 + config.Threshold
                 simulation.force("link").strength(link_strength)
                 simulation.alphaTarget(0.2).restart()
             });
@@ -621,7 +621,7 @@ baraxis.append("g")
         var active_links = g.selectAll("line").filter(function (d) {
             return name == d.source.name || name == d.target.name;
         });
-        //console.log('hello, fading');
+        console.log('hello, fading');
 
         svg.selectAll("line").attr("class", "inactive");
 

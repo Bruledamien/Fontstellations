@@ -30,8 +30,8 @@ authorized_links = [link for link in graph_links
 print ("Helvetica" in authorized_fonts_list and "Futura" in authorized_fonts_list)
 print str(len(authorized_links)) + " authorized links"
 
-with open("../../ForceGraph/Data/absolute link value/graph_links_min{}.json".format(threshold), 'w') as outfile:
+with open("../../ForceGraph/Data/absolute link value/graph_links_min{}_2.json".format(threshold), 'w') as outfile:
         json.dump(authorized_links, outfile)
 
-with open("../../ForceGraph/Data/absolute link value/graph_nodes_min{}.json".format(threshold), 'w') as outfile:
+with open("../../ForceGraph/Data/absolute link value/graph_nodes_min{}_2.json".format(threshold), 'w') as outfile:
         json.dump(authorized_nodes, outfile)

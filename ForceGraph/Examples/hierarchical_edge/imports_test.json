@@ -1,4 +1,0 @@
-[
-{"name": "Fira Sans", "size": 1,"imports": ["FF_Tisa"]},
-{"name": "FF_Tisa", "size": 5,"imports": ["Fira Sans"]}
-]

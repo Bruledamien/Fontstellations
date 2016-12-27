@@ -1,6 +1,7 @@
 # Fontstellations
 
-This repo contains the code and data for the Fontstellations project, available [here](https://datascopeanalytics.com/fontstellations/).
+This repo contains the code and data for the Fontstellations project, available [here](https://datascopeanalytics.com/fontstellations/)
+(Open with Chrome or Firefox web browsers).
 To learn more about the context of this project, you can read this [blog post](https://datascopeanalytics.com/blog/fontstellations/).
 
 ## File structure

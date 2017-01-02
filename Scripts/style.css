@@ -1,0 +1,16 @@
+svg {
+    background-color: black;
+}
+.edge > path, .node > ellipse {
+    stroke: #ccccaa;
+    stroke-opacity: 0.5;
+}
+.node > ellipse {
+    fill: black;
+    fill-opacity: 0.5;
+}
+.node > text {
+    fill: #ccccaa;
+    font-size: 9pt;
+    font-family: 'Anonymous Pro';
+}
